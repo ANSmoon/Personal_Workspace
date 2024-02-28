@@ -1,0 +1,2 @@
+git remote add origin https://lab.ssafy.com/s11/javabi/live-web-front
+$ git pull origin master

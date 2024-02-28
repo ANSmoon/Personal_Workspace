@@ -1,0 +1,122 @@
+/* 기본적으로 브라우저에서 사용하고 있는 기본 css 요소 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 여백 까지 박스 사이즈에 포함 하기  */
+    box-sizing: margin-box;
+    /* 리스트 요소의 스타일을 없앤다. (기본 : 점) */
+    list-style: none;
+    background-color: none;
+}
+
+a {
+    /* 앵커 태그의 text 스타일을 없앤다. */
+    text-decoration: none;
+    /* 글자색 설정 */
+    color: whitesmoke;
+}
+
+/* header 요소의 전체 스타일링 */
+header {
+    background-color: #333;
+    /* 배경색 설정 */
+    color: #fff;
+    /* 글자색 설정 */
+    padding: 10px;
+    /* 내부 여백 설정 */
+}
+
+footer{
+    background-color: black;
+    color: white;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+/* header-nav 클래스 스타일링 */
+.header-nav {
+    display: flex;
+    /* 플렉스 박스로 설정하여 자식 요소들을 가로로 배치 */
+    justify-content: space-between;
+    /* 자식 요소들 사이의 여백을 균등하게 배치 */
+}
+
+/* header-nav-menu 클래스 스타일링 */
+.header-nav-menu {
+    display: flex;
+    /* 플렉스 박스로 설정하여 자식 요소들을 가로로 배치 */
+    list-style-type: none;
+    /* 리스트 스타일 제거 */
+}
+
+/* header-nav-menu 클래스의 자식 요소인 span 스타일링 */
+.header-nav-menu span {
+    margin-right: 10px;
+    margin-top:1%;
+    /* 우측 마진 설정 */
+}
+
+/* header-nav-search 클래스 스타일링 */
+.header-nav-search {
+    display: flex;
+    /* 플렉스 박스로 설정하여 자식 요소들을 가로로 배치 */
+}
+
+/* header-nav-search 클래스의 자식 요소인 input 스타일링 */
+.header-nav-search input[type="text"],
+.header-nav-search input[type="submit"] {
+    padding: 5px;
+    /* 내부 여백 설정 */
+    margin-right: 10px;
+    /* 우측 마진 설정 */
+}
+
+/* header-nav-logo 클래스 스타일링 */
+.header-nav-logo {
+    font-size: 24px;
+    /* 글자 크기 설정 */
+}
+
+ul li div b {
+    border-bottom: 1px solid black;
+    font-style: oblique;
+}
+
+/* 영화 목록을 가로로 배열하고 자동으로 줄 바꿈 */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 영화 아이템의 크기와 여백 설정 */
+ul li {
+    flex: 0 0 200px; /* 너비를 200px로 고정 */
+    margin: 10px; /* 외부 여백 설정 */
+}
+
+section .movie{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main{
+    display: flex;
+}
+
+aside{
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-bottom: 0%;
+    white-space: nowrap;
+}
+
+section h3{
+    margin-top: 20px;
+    margin-left: 10px;
+}
