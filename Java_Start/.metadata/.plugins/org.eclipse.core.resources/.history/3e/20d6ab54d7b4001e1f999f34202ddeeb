@@ -1,0 +1,12 @@
+
+public class 이등변삼각형_1 {
+	public static void main(String[] args) {
+		int[][] arr = new int[3][5];
+		
+		int left = 0;
+		int right = 4;
+		
+		
+		
+	}
+}

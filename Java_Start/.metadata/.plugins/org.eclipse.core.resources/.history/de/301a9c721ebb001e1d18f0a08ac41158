@@ -1,0 +1,26 @@
+package test03_throws;
+
+// CheckedException
+public class ThrowTest1 {
+	public static void main(String[] args) {
+		method();
+	}
+	
+	public static void method() throws ClassNotFoundException{
+		// 호출한 곳에서 다시 처리하거나, 위임
+		try {
+			method2();	
+		} catch(ClassNotFoundException e) {
+			System.out.println(e.printStackTrace());
+		}
+		
+	}
+	
+	public static void method2() throws ClassNotFoundException {
+		// 예외 처리 위임 => 호출한 곳에 위임함
+		Class.forName("SSAFY"); //'ssafy'라는 이름의 클래스를 로드!
+		
+		// 1. 직접 처리
+		// 2. 간접 처리
+	}
+}

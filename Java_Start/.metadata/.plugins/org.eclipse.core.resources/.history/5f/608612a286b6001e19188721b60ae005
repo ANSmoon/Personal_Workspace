@@ -1,0 +1,10 @@
+package homework1;
+
+import java.util.Scanner;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		Sacnner sc = new Scanner(System.in);
+		
+	}
+}

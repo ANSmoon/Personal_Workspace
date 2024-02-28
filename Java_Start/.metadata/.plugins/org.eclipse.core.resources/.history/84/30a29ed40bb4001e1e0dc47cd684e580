@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class Array04_Copy {
+	public static void main(String[] args) {
+		int[] nums = {13, 56, 1, 159, 200};
+		
+		// 1. 반복문
+		// - 새로 배열 생성 후 반복문을 통해 옮기기
+		
+		int[] temp = new int[nums.length * 2];
+		
+		for(int i = 0; i < nums.length; i++) {
+			temp[i] = nums[i];
+		}
+		
+		System.out.println(Arrays.toString(temp));
+		
+		
+		
+		
+	}
+}

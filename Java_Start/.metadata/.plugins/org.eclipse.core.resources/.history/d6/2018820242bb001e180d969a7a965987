@@ -1,0 +1,128 @@
+package 상품_Collection_실습;
+
+import java.awt.image.ImageConsumer;
+import java.awt.image.ImageProducer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+public class ProductManagerImpl implements IProductManager{
+	List<Product> products = new ArrayList<>();
+	Map<String, List<Review>> reviews = new HashMap<>();
+	
+	private static int reviewNo = 0;
+	private static IProductManager instance = new ProductManagerImpl();
+	
+	
+	public static IProductManager getInstance() {
+		return instance;
+	}
+	
+	private ProductManagerImpl() {
+	}
+
+
+	@Override
+	public boolean addProduct(Product product) {
+		products.add(product);
+		return true;
+	}
+
+
+	@Override
+	public boolean updateProdect(Product product) {
+		
+		return false;
+	}
+
+
+	@Override
+	public boolean removdeProduct(String pCode) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public int sell(String pCode, int cnt) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public Product[] getProductList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Product searchByCode(String pCode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public boolean addReview(Review review) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public boolean removeReview(String pCode) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public List<Review> getProductReview(String pCode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Product[] searchByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public long getTotoalPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public Product[] getProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Refrigerator[] getRefrigerators() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Refrigerator[] getRefrigeratorsFreezer(boolean freezer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+
+}

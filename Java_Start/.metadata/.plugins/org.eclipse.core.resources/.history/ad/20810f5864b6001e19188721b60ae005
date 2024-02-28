@@ -1,0 +1,24 @@
+package modifier00_package.pkg1;
+
+import modifier00_package.pkg1.pkg2.Person;
+// import 하면 그 package를 사용한다.
+
+public class PersonTest {
+    public static void main(String[] args) {
+    	Person p = new Person();
+    	System.out.println(p.pkg);
+    	
+    	// 만약
+    	// 서로 다른 package에 있지만, 같은 이름의 class를 동시에 사용하고 싶다면?
+    	
+    	// 풀패키지명을 사용 => package.class 명
+    	
+    	modifier00_package.pkg1.pkg2.pkg3.Person p2 = new modifier00_package.pkg1.pkg2.pkg3.Person();
+    	modifier00_package.pkg1.Person p1 = new modifier00_package.pkg1.Person();
+    	
+    	System.out.println(p1.pkg);
+    	System.out.println(p2.pkg);
+    	System.out.println(p3.pkg);
+    	
+    }
+}

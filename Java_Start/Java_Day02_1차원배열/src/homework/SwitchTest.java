@@ -1,0 +1,29 @@
+package homework;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SwitchTest {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int n = 0;
+		int m = 0;
+
+		n = sc.nextInt();
+		m = sc.nextInt();
+
+		int[] button = new int[n]; // 전체 스위치 배열 선언
+
+		for (int i = 0; i < m; i++) {
+			int number = sc.nextInt(); //1개씩 버튼 위치 입력 받기
+			for (int j = number - 1; j < n; j += number) {
+				button[j] = 1 - button[j];
+			}
+		}
+		
+		System.out.println(Arrays.toString(button));
+	}
+}
+
+// 1시간 넘음;;

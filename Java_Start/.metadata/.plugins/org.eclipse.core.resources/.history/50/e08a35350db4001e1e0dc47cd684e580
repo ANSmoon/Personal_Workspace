@@ -1,0 +1,19 @@
+
+
+public class Array05_MinMax {
+	public static void main(String[] args) {
+		int [] test = {100,20,31,45,50,6,700,89,999,1000};
+		
+		int min = 10000;
+		int max = 0;
+		
+		for(int i : test) {
+			if(min > i)
+				min = i;
+			if(max < i)
+				max = i;
+		}
+		
+		System.out.println(min + " , " + max);
+	}
+}

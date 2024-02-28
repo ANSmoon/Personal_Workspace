@@ -1,0 +1,101 @@
+package homework_3;
+
+import java.util.Scanner;
+
+public class Rock_Scissor_Paper {
+	public static void main(String[] args) {
+		int number = (int) (Math.random() * 3) + 1;
+		
+		Scanner sc = new Scanner(System.in);
+		int choice = sc.nextInt();
+		int i = 0;
+		int user_win = 0, ai_win = 0;
+		System.out.print("번호를 입력하세요 >>> ");
+			
+		
+		if (choice == 1) {
+			System.out.printf("5판 3선입니다. 한번 봅시다. 인간");
+			for(i = 0; i < 5; i++) {
+				int user = sc.nextInt();
+				System.out.printf("가위바위보 중 하나 입력 : ");
+				if(user == number) {
+					System.out.println("비겼습니다!!");
+				}
+				else if((user == 1 & number == 2) | (user == 2 & number == 3) | (user == 3 & number == 1)) {
+					System.out.println("You lose!!!");
+					ai_win++;
+				}
+				else {
+					System.out.println("You win!!!");
+					user_win++;
+				}
+			}
+			if(ai_win > user_win) {
+				System.out.println("### AI 승!!! 수듄;;");
+			}
+			else if(ai_win < user_win) {
+				System.out.println("### 인간 승");
+			}
+			else {
+				System.out.println("### Draw!!");
+			}
+		}
+		else if(choice == 2) {
+			System.out.printf("깔끔한 3판 2선입니다. 무르기 없습니다.");
+			for(i = 0; i < 3; i++) {
+				int user = sc.nextInt();
+				System.out.printf("가위바위보 중 하나 입력 : ");
+				if(user == number) {
+					System.out.println("비겼습니다!!");
+				}
+				else if((user == 1 & number == 2) | (user == 2 & number == 3) | (user == 3 & number == 1)) {
+					System.out.println("You lose!!!");
+					ai_win++;
+				}
+				else {
+					System.out.println("You win!!!");
+					user_win++;
+				}
+			}
+			if(ai_win > user_win) {
+				System.out.println("### AI 승!! 수듄;;");
+			}
+			else if(ai_win < user_win) {
+				System.out.println("### 인간 승");
+			}
+			else {
+				System.out.println("### Draw!!");
+			}
+		}
+		else if (choice == 3) {
+			System.out.printf("단판승부입니다. 봐주지 않겠습니다. 인간");
+			for(i = 0; i < 1; i++) {
+				int user = sc.nextInt();
+				System.out.printf("가위바위보 중 하나 입력 : ");
+				if(user == number) {
+					System.out.println("비겼습니다!!");
+				}
+				else if((user == 1 & number == 2) | (user == 2 & number == 3) | (user == 3 & number == 1)) {
+					System.out.println("You lose!!!");
+					ai_win++;
+				}
+				else {
+					System.out.println("You win!!!");
+					user_win++;
+				}
+			}
+			if(ai_win > user_win) {
+				System.out.println("### AI 승!! 수듄;;");
+			}
+			else if(ai_win < user_win) {
+				System.out.println("### 인간 승");
+			}
+			else {
+				System.out.println("### Draw!!");
+			}
+		}
+		else {
+			System.out.println("1 ~ 3 숫자만 입력하세요");
+		}
+	}
+}

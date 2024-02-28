@@ -1,0 +1,7 @@
+import java.util.Scanner;
+
+public class Array01_배열의선언 {
+	public static void main(String[] args) {
+		
+	}
+}

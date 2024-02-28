@@ -1,0 +1,16 @@
+package modifier00_package;
+
+import java.util.*;
+
+public class ImportTest {
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+    	Date d = new Date();
+    	
+    	int[] arr = new int[] {1,2,3,4};
+    	Arrays.toString(arr);
+    	
+    	
+    	
+    }
+}

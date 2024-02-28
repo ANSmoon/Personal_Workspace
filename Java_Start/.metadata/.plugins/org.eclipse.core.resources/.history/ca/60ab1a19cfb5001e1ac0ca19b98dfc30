@@ -1,0 +1,20 @@
+// Author : 문범수
+// Date : 2024-01-18
+// duration : 15m
+// name : 게시판 객체 생성실습
+// subject : 클래스와 객체
+
+package homework;
+
+import java.util.Date;
+
+public class Article {
+	int articleid;
+	String title, content, userSeq, viewCnt;
+	Date regDate;
+	
+	Article(){}
+	Article(int articleid, String title, String content, String userSeq, String viewCnt){
+		
+	}
+}

@@ -1,0 +1,37 @@
+package homework_2;
+
+import java.util.Scanner;
+
+public class Season_Printing {
+	public static void main(String[] args) {
+		// Season1.java
+		for(int i = 0; i < 3; i++) {
+			System.out.println("월 입력 >>");
+			Scanner sc = new Scanner(System.in);
+			
+			int month = sc.nextInt();
+			
+			if(3 <= month & month <= 5) {
+				System.out.println(month + "월은 봄입니다.");
+			}
+			
+			else if(6 <= month & month <= 8) {
+				System.out.println(month + "월은 여름입니다.");
+			}
+			
+			else if(9 <= month & month <= 11) {
+				System.out.println(month + "월은 가을5입니다.");
+			}
+			
+			else{
+				System.out.println(month + "월은 겨울입니다.");
+			}
+		}
+		
+		
+		
+		
+		
+		// Season2. java
+	}
+}

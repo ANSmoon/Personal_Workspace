@@ -1,0 +1,18 @@
+package class05;
+
+public class Person2 {
+	String name;
+	int age;
+	String hobby;
+
+	// 생성자 : 클래스명과 일치,
+	// 반환형이 없다
+
+	// 파라미터가 있는 생성자 => 멤버 변수 초기화에 사용
+	Person2(String n, int a, String h) {
+		name = n;
+		age = a;
+		hobby = h;
+	}
+
+}

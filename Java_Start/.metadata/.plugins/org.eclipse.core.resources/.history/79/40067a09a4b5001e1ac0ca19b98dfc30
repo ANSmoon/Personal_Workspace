@@ -1,0 +1,27 @@
+package class05;
+
+public class Person2 {
+	String name;
+	int age;
+	String hobby;
+
+	// 생성자 : 클래스명과 일치,
+	// 반환형이 없다
+	
+	Person2(){
+		
+	}
+
+	// 파라미터가 있는 생성자 => 멤버 변수 초기화에 사용
+	Person2(String n, int a, String h) {
+		name = n;
+		age = a;
+		hobby = h;
+	}
+	
+	void info() {
+		// 멤버 method => 멤버 변수에 바로 접근 가능
+		System.out.println("이름은 " + name + "이고, 나이는 " + age + "새 취미는 " + hobby + "입니다.");
+	}
+
+}

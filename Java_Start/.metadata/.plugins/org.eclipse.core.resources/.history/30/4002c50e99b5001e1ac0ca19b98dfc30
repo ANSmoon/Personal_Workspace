@@ -1,0 +1,9 @@
+
+public class PersonTest {
+	public static void main(String[] args) {
+		// 클래스로 객체 생성
+		// Person 클래스를 변수의 타입으로 사용
+		
+		Person.class.arrayType();
+	}
+}

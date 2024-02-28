@@ -1,0 +1,18 @@
+// Author : 문범수
+// Date : 2024-01-18
+// duration : 15m
+// name : 게시판 객체 생성실습
+// subject : 클래스와 객체
+
+package homework;
+
+public class User1 {
+	int userSeq;
+	String userid, password, userName, nickName, email;
+	
+	
+	
+	
+	User1(){}
+	
+}

@@ -1,0 +1,8 @@
+
+public class 이등변삼각형_2 {
+	public static void main(String[] args) {
+		int[][] arr = new int[5][5];
+		
+		System.out.println(arr[4][4]);
+	}
+}

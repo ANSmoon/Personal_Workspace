@@ -1,0 +1,13 @@
+package 영화예외처리;
+
+public class TitleNotFoundException{
+	String title;
+	
+	public TitleNotFoundException(String title) {
+		this.title = title;
+	}
+
+	public String getTitle() {
+		return title;
+	}	
+}

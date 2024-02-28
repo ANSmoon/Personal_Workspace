@@ -1,0 +1,16 @@
+package test02_try_catch;
+
+public class ExceptionTest1 {
+	public static void main(String[] args) {
+		// try ~ catch 문을 이용한 예외 처리
+		int[] nums = {10};
+		
+		try {
+			// 예외 발생할 수 있는 코드를 try에 넣는다.
+			System.out.println(nums[2]);
+		}catch(ArrayIndexOutOfBoundsException e) { // catch() 예외를 파라미터로 받는다.
+			// 
+			System.out.println("배열 인덱스 범위 초과");
+		}
+	}
+}

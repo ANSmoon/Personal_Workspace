@@ -1,0 +1,18 @@
+// Author : 문범수
+// Date : 2024-01-18
+// duration : 10m
+// name : 맛집, 리뷰객체 생성
+// subject : 클래스와 객체
+
+package homework;
+
+public class RestaurantTest {
+	public static void main(String[] args) {
+		Restaurant store1 = new Restaurant(100, "광양숯불구이", "서울", "고기",4);
+		Restaurant store2 = new Restaurant(200, "부산회센터", "부산", "우럭",2);
+		System.out.println("********************맛집목록******************");
+		System.out.println(store1.toString());		
+		System.out.println(store2.toString());
+		System.out.println("********************리뷰목록*****************");
+	}
+}

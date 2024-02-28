@@ -1,0 +1,32 @@
+package homework;
+
+public class Book {
+	String isbn;
+	String title;
+	String author;
+	String publisher;
+	int price;
+	String desc;
+	
+	Book() {}
+	Book(String isbn, String title, String author, String publisher, int price, String desc){
+		this.isbn = isbn;
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+		this.price = price;
+		this.desc = desc;
+	}
+	
+	public String toString() {
+		isbn = this.isbn;
+		title = this.title;
+		author = this.author;
+		publisher = this.publisher;
+		price = this.price;
+		desc = this.desc;
+		
+		return "1";
+	}
+	
+}
