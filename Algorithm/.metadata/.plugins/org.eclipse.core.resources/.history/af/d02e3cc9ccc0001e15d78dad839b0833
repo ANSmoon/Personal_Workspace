@@ -1,0 +1,74 @@
+/*
+ * Author : 문범수
+ * Date : 2024-02-01
+ * subject : 회문 2
+ * name : Solution.java
+ * duration : m
+ * CodeNo : 1216
+ */
+
+package homework;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class Solution {
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		int index = 0;
+
+		while (index <= 1) {
+			index = sc.nextInt();
+			char[][] ch = new char[100][100];
+
+			for (int i = 0; i < 100; i++) {
+				String str = reader.readLine();
+				for (int j = 0; j < 100; j++) {
+					ch[i][j] = str.charAt(j);
+				}
+			}
+
+			for (int i = 0; i < 100; i++) {
+				for (int j = 0; j < 100; j++) {
+					System.out.print(ch[i][j]);
+				}
+				System.out.println();
+			}
+
+			index++;
+//			System.out.println("#" + index + " ");
+		}
+
+		sc.close();
+		reader.close();
+	}
+
+	static int palindrome(char[][] ch) {
+		int answer = 1;
+		
+		// 가운데를 기준으로 양쪽으로 뻗어 나가면서 같은게 있는지 탐색
+		for (int i = 0; i < 100; i++) {
+			for (int j = 1; j < 99; j++) {
+				StringBuilder str1 = new StringBuilder();
+				StringBuilder str2 = new StringBuilder();
+				StringBuilder str3 = new StringBuilder();
+				StringBuilder str4 = new StringBuilder();
+				
+				for (int k = 1; k < Math.min(j, 100 - j); k++) {
+					str1.append(ch[i][j + k]);
+					str2.append(ch[i][j - k]);
+					if (str1.equals(str2)) {
+						answer = (k * 2) + 1;
+					}else {
+						break;
+					}
+				}
+			}
+		}
+
+		return answer;
+	}
+}

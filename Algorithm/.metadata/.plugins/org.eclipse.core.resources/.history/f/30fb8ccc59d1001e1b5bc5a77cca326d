@@ -1,0 +1,29 @@
+/*
+ * Author : 문범수
+ * Date : 2024-02-22
+ * subject : 
+ * main : 
+ * issue : 
+ * name : .java
+ * duration : m
+ * CodeNo : 1493
+ */
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class newOperationOfNumber {
+	public static void main(String[] args) {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		
+		int total = Integer.parseInt(reader.readLine());
+		int index = 1;
+		
+		while(index <= total) {
+			
+		}
+		
+		
+		
+	}
+}

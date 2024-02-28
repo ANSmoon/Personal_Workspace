@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class powerSet_1_iterate {
+	public static void main(String[] args) {
+		int N = 4; // 재료는 4개
+		int[] set = new int[N];
+
+		for (int i = 0; i < 2; i++) {
+			set[0] = i;
+			for(int j = 0; j < 2; j++) {
+				set[1] = j;
+				for(int k = 0; k < 2; k++) {
+					set[2] = k;
+					for(int l = 0; l < 2; l++) {
+						set[3] = l;
+						System.out.println(Arrays.toString(set));
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+/*
+ * Author : 문범수
+ * Date : 2024-01-30
+ * subject : 중간값 구하기
+ * name : Solution3.java
+ * duration : 28m
+ * CodeNo : 2063
+ */
+
+package homework;
+
+import java.util.Scanner;
+
+public class Solution3 {
+	public static void main(String[] args) {
+		// 입력
+		Scanner sc = new Scanner(System.in);
+		
+		// 전체 갯수
+		int total = sc.nextInt();
+		
+		// 배열 생성
+		int[] arr = new int[total];
+		
+		// 배열 입력
+		for(int i = 0; i < total; i++) {
+			arr[i] = sc.nextInt();
+		}
+		
+		// 중간값 출력 : 전체 길이의 절반
+		System.out.println(arr[107]);
+		
+		sc.close();
+	}
+}

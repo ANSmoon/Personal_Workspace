@@ -1,0 +1,43 @@
+/*
+ * Author : 문범수
+ * Date : 2024-02-22
+ * subject : 
+ * main : 
+ * issue : 
+ * name : .java
+ * duration : m
+ * CodeNo : 1493
+ */
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class newOperationOfNumber {
+	public static int result;
+	public static StringTokenizer token;
+	public static int[][] arr;
+	public static int x;
+	public static int y;
+
+	public static void main(String[] args) throws Exception {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		int total = Integer.parseInt(reader.readLine());
+		int index = 1;
+
+		while (index <= total) {
+			token = new StringTokenizer(reader.readLine());
+			x = Integer.parseInt(token.nextToken());
+			y = Integer.parseInt(token.nextToken());
+			
+			
+			
+			System.out.println("#" + index + " " + result);
+			index++;
+		}
+		
+		
+
+	}
+}

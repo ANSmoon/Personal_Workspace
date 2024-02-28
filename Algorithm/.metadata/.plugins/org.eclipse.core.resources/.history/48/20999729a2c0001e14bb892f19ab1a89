@@ -1,0 +1,12 @@
+
+public class String_04_패턴매칭 {
+	public static void main(String[] args) {
+		String text = "This iss a book";
+		String pattern = "iss";
+		
+		
+	}
+	public static int patternMathing(char[] text, char[] pattern) {
+		
+	}
+}

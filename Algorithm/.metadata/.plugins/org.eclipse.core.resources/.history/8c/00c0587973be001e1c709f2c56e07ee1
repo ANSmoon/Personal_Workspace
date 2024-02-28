@@ -1,0 +1,9 @@
+package 수업;
+
+public class Array_02_BubbleSort {
+	public static void main(String[] args) {
+		int[] arr = {32, 7, 83, 54, 49, 22};
+		
+		
+	}
+}

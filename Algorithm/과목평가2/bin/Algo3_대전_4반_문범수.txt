@@ -1,0 +1,42 @@
+1. 선택 정렬의 pseudocode 또는 java 코드를 작성하시오
+import java.util.Arrays;
+
+public class Algo3_대전_4반_문범수 {
+	public static void main(String[] args) {
+		int[] arr = {100, 200, 1, 20, 30, 7};
+		
+		int min_index;
+		int temp;
+		
+		Selection Sort Mechanism
+		비교대상이 되는 인자의 뒤 index부터 시작하여 가장 작은 값 탐색
+		이후 가장 작은값을 비교대상의 index 인자와 자리 교체
+		해당과정을 배열의 끝 인자 전까지 진행하면 정렬이 완료된다.
+		for(int i = 0; i < arr.length - 1; i++) {
+			min_index = i;
+			for(int j = i + 1; j < arr.length; j++) {
+				if(arr[min_index] > arr[j]) {
+					min_index = j;
+				}
+			}
+			temp = arr[i];
+			arr[i] = arr[min_index];
+			arr[min_index] = temp;
+		}
+		System.out.println(Arrays.toString(arr));
+		
+	}
+}
+
+2. 선택 정렬에 대한 설명을 서술하시오. (시간 복잡도, 제한 사항, 다른 정렬과의 비교 필수)
+선택정렬의 경우 시간복잡도는 O(n^2)에 해당한다.
+교환을 한번만 할 뿐이지 첫번째 인자부터 끝 인자 전까지 각각을 나머지 배열 인자들과 비교하는 과정을 거치기 때문에
+시간복잡도는 n^2이 된다.
+
+선택 정렬은 코드가 직관적이고, 짧은 길이의 배열에 대해서는 시간상 불리점이 크지 않지만 배열의 길이가 길어지면
+효율이 급격히 떨어지므로 큰 배열에 대해서는 적합하지 않은 정렬이다.
+
+버블 정렬과 유사하지만 교환을 매번 진행하는 버블 정렬과 다르게 최솟값을 먼저 탐색한 후 최종적으로 한번만 교환한다는
+점이 가장 큰 차이점이다.
+다른 countingSort는 누적합을 통해 정렬을 진행하기에 순서가 유지되지만 Selection sort는 순서를 고려하지
+않는 정렬에 해당한다.

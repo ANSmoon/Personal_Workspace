@@ -1,0 +1,16 @@
+/*
+ * Author : 문범수
+ * Date : 2024-01-30
+ * subject : 중간값 구하기
+ * name : Solution3.java
+ * duration : 28m
+ * CodeNo : 1204
+ */
+
+package homework;
+
+public class Solution3 {
+	public static void main(String[] args) {
+		
+	}
+}

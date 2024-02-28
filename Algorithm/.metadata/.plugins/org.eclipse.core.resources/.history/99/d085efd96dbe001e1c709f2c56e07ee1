@@ -1,0 +1,16 @@
+/*
+ * Author : 문범수
+ * Date : 2024-01-29
+ * subject : 최대 최소 및 평균
+ * name : Solution.java
+ * duration : 60m
+ * CodeNo : 1206
+ */
+
+package 중간_평균값_구하기;
+
+class Solution {
+	public static void main(String[] args) {
+		
+	}
+}

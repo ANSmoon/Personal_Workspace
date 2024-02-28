@@ -1,0 +1,23 @@
+package homework;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class 특정_문자열_탐색 {
+	public static void main(String[] args) {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		
+		int index = 0;
+		while(index <= 10) {
+			
+			
+			
+			
+			index++;
+		}
+		
+		
+		reader.close();
+		
+	}
+}

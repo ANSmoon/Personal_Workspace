@@ -1,0 +1,53 @@
+/*
+ * Author : 문범수
+ * Date : 2024-01-31
+ * subject : 방향탐색
+ * name : Solution.java
+ * duration : m
+ * CodeNo : 2001
+ */
+
+package homework;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Solution {
+	public static void main(String[] args) throws Exception {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+				
+		int total = Integer.parseInt(reader.readLine());
+		int x = 1;
+		
+		while(x <= total) {
+			String second = reader.readLine();
+			
+			int N = 0;
+			int M = 0;
+			int index = 0;
+			
+			StringTokenizer token = new StringTokenizer(second);
+			N = Integer.parseInt(token.nextToken());
+			M = Integer.parseInt(token.nextToken());
+			
+			int[][] arr = new int[N][N];
+			
+			for(int i = 0; i < N; i++) {
+				String third = reader.readLine();	
+				token = new StringTokenizer(third);
+				for(int j = 0; j < N; j++) {
+					while(token.hasMoreTokens()) {
+						arr[i][j] = Integer.parseInt(token.nextToken());
+					}
+				}
+			}
+			
+			
+			
+			
+			x++;
+		}
+		
+	}
+}

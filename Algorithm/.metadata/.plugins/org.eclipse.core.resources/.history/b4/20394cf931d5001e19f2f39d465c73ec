@@ -1,0 +1,64 @@
+/*
+ * Author : 문범수
+ * Date : 2024-02-27
+ * subject : 
+ * main : 
+ * issue : 
+ * name : hamburger.java
+ * duration : m
+ * CodeNo : 5215
+ */
+
+package homework;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class hamburger {
+	public static StringTokenizer token;
+	public static int N; // 재료의 수
+	public static int L; // 제한 칼로리
+	public static int[][] arr; // 각 재료의 맛 점수 및 칼로리
+	public static boolean[] visited;
+	public static int[][] result; // 조합의 결과가 저장된 배열(칼로리만 저장)
+	public static int ans;
+	public static int cnt = 0;
+
+	public static void main(String[] args) throws Exception {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int total = Integer.parseInt(reader.readLine());
+		int index = 1;
+
+		while (index <= total) {
+			token = new StringTokenizer(reader.readLine());
+			N = Integer.parseInt(token.nextToken());
+			L = Integer.parseInt(token.nextToken());
+			arr = new int[N][2];
+			visited = new boolean[N];
+			result = new int[1 << N][2];
+
+			// 맛과 칼로리를 나타내는 배열 저장
+			for (int i = 0; i < N; i++) {
+				token = new StringTokenizer(reader.readLine());
+				arr[i][0] = Integer.parseInt(token.nextToken());
+				arr[i][1] = Integer.parseInt(token.nextToken());
+			}
+
+			// 순열로 열량을 넘지 않는 경우 탐색
+//			powerSet();
+
+			ans = result[0][0];
+			System.out.println("#" + index + " " + ans);
+			index++;
+		}
+	}
+
+	public static void powerSet(int N) {
+		
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,16 @@
+/*
+ * Author : 문범수
+ * Date : 2024-01-30
+ * subject : 최빈수 구하기
+ * name : Solution2.java
+ * duration : 60m
+ * CodeNo : 1204
+ */
+
+package homework;
+
+public class Solution2 {
+	public static void main(String[] args) {
+		
+	}
+}

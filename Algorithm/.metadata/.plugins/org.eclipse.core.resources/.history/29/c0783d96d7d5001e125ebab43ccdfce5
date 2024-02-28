@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class divide_Conquer_06_MergeSort {
+	public static int[] arr = { 5, 22, 32, 45, 76, 21, 45, 7, 6, 2, 4, 84, 6, 9 };
+	public static int[] sortedArr = new int[arr.length];
+	
+	public static void main(String[] args) {
+		System.out.println("정렬 전 : " + Arrays.toString(arr));
+		mergeSort(0, arr.length - 1);
+		System.out.println("정렬 후 : " + Arrays.toString(arr));
+	}
+
+	// left 구간의 시작 위치 / right 구간의 끝 위치
+	public static void mergeSort(int left, int right) {
+//		if(left >= right) return;
+		
+		if(left < right) {
+			int mid = (left + right) / 2;
+			
+		}
+	}
+}

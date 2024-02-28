@@ -1,0 +1,8 @@
+
+public class divide_Conquer_06_QuickSort_Lomuto_Partition {
+	public static int[] arr = { 1, 2, 3, 4, 5, 75, 34, 32, 51, 25 };
+
+	public static void main(String[] args) {
+
+	}
+}

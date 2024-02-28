@@ -1,0 +1,21 @@
+
+public class divide_Conquer_02_exponentiation_Recursive {
+	public static void main(String[] args) {
+		int C = 2;
+		int N = 20;
+
+		System.out.println(pow(C, N));
+	}
+
+	public static int pow(int C, int N) {
+		if (N == 1)
+			return C;
+
+		if (N % 2 == 0) {
+			return pow(C, N / 2) * pow(C, N / 2);
+		}
+		
+		return pow(C, (N - 1) / 2) * pow(C, (N - 1) / 2);
+
+	}
+}

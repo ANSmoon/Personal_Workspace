@@ -1,0 +1,16 @@
+public class combination_2_recursive_iterate {
+	static String[] material = { "상추", "패티", "치즈", "피클" };
+	static int N, R;
+	static String[] set;
+	
+	public static void main(String[] args) {
+		N = 4;
+		R = 2;
+		set = new String[R];
+		combination(0,0);
+	}
+
+	private static void combination(int i, int j) {
+		
+	}
+}
