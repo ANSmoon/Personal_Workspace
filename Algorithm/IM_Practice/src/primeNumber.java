@@ -3,9 +3,9 @@
  * Date : 2024-02-29
  * subject : primeNumber 구하기
  * main : 재귀함수
- * issue : 
+ * issue : 시간초과
  * name : primeNumber.java
- * duration : m
+ * duration : 80m
  * CodeNo : 4689
  */
 
@@ -16,43 +16,44 @@ import java.util.StringTokenizer;
 public class primeNumber {
 	static StringTokenizer token;
 	static int A, B, D, ans;
-	static boolean pass, contain;
+	static int[] arr;
+	static boolean contain;
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int total = Integer.parseInt(reader.readLine());
-		token = new StringTokenizer(reader.readLine());
-		D = Integer.parseInt(token.nextToken());
-		A = Integer.parseInt(token.nextToken());
-		B = Integer.parseInt(token.nextToken());
 		int index = 1;
 
 		while (index <= total) {
+			token = new StringTokenizer(reader.readLine());
+			D = Integer.parseInt(token.nextToken());
+			A = Integer.parseInt(token.nextToken());
+			B = Integer.parseInt(token.nextToken());
 			ans = 0;
-			for (int i = A; i <= B; i++) {
-				pass = false;
+			arr = new int[B+1];
+			for(int i = 2; i <= B; i++) {
+				arr[i] = i;
+			}
+			
+			for(int i = 2; i <= Math.sqrt(B); i++) {
+				for(int j = i*i; j <= B; j = j + i) {
+					arr[j] = 0;
+				}
+			}
+			
+			for(int i = A; i < arr.length; i++) {
 				contain = false;
-				if (A != 2 && A % 2 == 0) {
-					continue;
-				}
-				for (int j = 2; j < A / 2; j++) {
-					if (A % j == 0) {
-						pass = true;
-						break;
-					}
-				}
-				if (pass) {
-					continue;
-				}
-				while (!contain) {
-					if (A % 10 == D) {
-						contain = true;
-						ans++;
-						break;
-					}
-					A /= 10;
-					if (A < 10) {
-						break;
+				if(arr[i] > 0) {
+					while(!contain) {
+						if(arr[i] % 10 == D) {
+							contain = true;
+							ans++;
+							break;
+						}
+						if(arr[i] < 10) {
+							break;
+						}
+						arr[i] /= 10;
 					}
 				}
 			}
