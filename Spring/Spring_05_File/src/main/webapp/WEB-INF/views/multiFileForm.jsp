@@ -7,10 +7,10 @@
 <title>다중파일업로드</title>
 </head>
 <body>
-	<h2>Multi File Upload</h2>
-		<form action="multiFileUpload" method = "POST" enctype = "multipart/form-data">		
-		<input type  ="file" name = "files" multiple = "multiple">
-		<input type = "submit" value = "파일 등록">
+	<h2>Multi file Upload</h2>
+	<form action="multiFileUpload" method="POST" enctype="multipart/form-data">
+		<input type="file" name="files" multiple="multiple">
+		<input type="submit" value="파일 등록">
 	</form>
 </body>
 </html>

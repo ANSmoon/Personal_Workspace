@@ -1,6 +1,7 @@
 package com.ssafy.mvc.controller;
 
 import java.io.File;
+import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -15,31 +16,31 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class MainController {
 
-	// file or class path 등 resource를 load 하는데 사용하는 interface
+	// 파일이나 클래스 경로 등 리소스를 로드하는데 사용하는 인터페이스
 	private final ResourceLoader resourceLoader;
-	
-	@Autowired // 하나 일때는 생략해도 존재하는 것
+
+	@Autowired // 이거 생략해도 있는거야!
 	public MainController(ResourceLoader resourceLoader) {
 		this.resourceLoader = resourceLoader;
 	}
-	
+
 	@GetMapping("/")
 	public String index() {
 		return "index";
 	}
-	
+
 	@GetMapping("/singleFileForm")
 	public String singleFileForm() {
 		return "singleFileForm";
 	}
-	
+
 	@PostMapping("/singleFileUpload")
-	public String singleFileUpload(@RequestParam("file") MultipartFile file, Model model) throws Exception {
-		// file이 있는지 검사, 용량이 없으면 등록 X
+	public String singleFileUpload(@RequestParam("file") MultipartFile file, Model model)
+			throws IllegalStateException, IOException {
+		// 파일 있는지 검사, 용량이 없으면 등록하지 않겠다!
 		if (file != null && file.getSize() > 0) {
-//			String fileName = file.getOriginalFilename();
-			// 왜 안될까?
-			String fileName = "dog01.jfif";
+			String fileName = file.getOriginalFilename();
+//			String fileName = "dog01.jpg";
 			System.out.println(fileName);
 			Resource resource = resourceLoader.getResource("resources/upload");
 			file.transferTo(new File(resource.getFile(), fileName));

@@ -10,8 +10,7 @@
 	<h2>File Upload</h2>
 	
 	<div>
-		<a href = "${pageContext.request.contextPath}/singleFileForm">Single File Upload</a>
+		<a href="${pageContext.request.contextPath}/singleFileForm">Single File Upload</a>
 	</div>
-	
 </body>
 </html>
