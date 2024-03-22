@@ -1,9 +1,0 @@
-
-public class divide_Conquer_05_BinarySearch_API {
-	public static int[] arr;
-	public static int key;
-
-	public static void main(String[] args) {
-		
-	}
-}

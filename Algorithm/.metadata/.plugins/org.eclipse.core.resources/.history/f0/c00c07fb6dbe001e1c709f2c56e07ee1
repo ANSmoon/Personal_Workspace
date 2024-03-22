@@ -1,7 +1,0 @@
-package 수업;
-
-public class Array_01_배열순회 {
-	public static void main(String[] args) {
-
-	}
-}

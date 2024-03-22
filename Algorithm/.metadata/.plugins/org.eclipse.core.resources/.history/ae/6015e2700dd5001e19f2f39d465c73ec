@@ -1,8 +1,0 @@
-public class combination_1_recursive {
-	// data array
-	static String[] material = { "상추", "패티", "치즈", "피클" };
-
-	public static void main(String[] args) {
-		
-	}
-}

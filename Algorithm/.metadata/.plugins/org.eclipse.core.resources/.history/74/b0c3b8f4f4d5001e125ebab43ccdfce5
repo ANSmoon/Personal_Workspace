@@ -1,7 +1,0 @@
-package homework;
-
-public class million_Integer {
-	public static void main(String[] args) {
-
-	}
-}

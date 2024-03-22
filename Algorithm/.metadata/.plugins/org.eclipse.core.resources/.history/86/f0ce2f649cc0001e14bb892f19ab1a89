@@ -1,9 +1,0 @@
-
-public class String_02_문자열뒤집기 {
-	public static void main(String[] args) {
-		String str = "Hello SSAFY!!";
-		
-		char[] charArr = str.toCharArray();
-		System.out.println(charArr);
-	}
-}

@@ -1,9 +1,0 @@
-
-public class divide_Conquer_06_QuickSort {
-	public static int[] arr = { 5, 22, 34, 68, 97, 15, 4, 78, 95, 36, 34, 21 };
-
-	public static void main(String[] args) {
-
-	}
-	
-}
