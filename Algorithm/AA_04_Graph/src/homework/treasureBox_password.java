@@ -3,7 +3,7 @@
  * Date : 2024-03-26
  * subject : 
  * main : 
- * issue : 우선순위큐가 정렬되지 않는 문제 발생
+ * issue : 우선순위큐가 정렬되지 않는 문제 발생 => 우선순위큐에 대한 정의 부족
  * name : treasureBox_password.java
  * duration : 60m
  * CodeNo : 5658
@@ -13,21 +13,21 @@ package homework;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class treasureBox_password {
 	static String str;
 	static char[] select;
 	static String[] ans;
-	static int N, K, total, result;
+	static int N, K, total;
+	static long result;
 	static StringTokenizer token;
-	static PriorityQueue<Integer> pq; // 우선순위 queue 선언
-	static Comparator<Integer> comparator = Comparator.reverseOrder(); // comparator 선언
-	static List<Integer> list;
-	
+//	static PriorityQueue<Long> pq; // 우선순위 queue 선언
+	static List<Long> list;
+
 	public static void main(String[] args) throws Exception {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		total = Integer.parseInt(reader.readLine());
@@ -38,13 +38,13 @@ public class treasureBox_password {
 			K = Integer.parseInt(token.nextToken()); // 뽑아야 하는 순서
 			result = 0;
 			str = reader.readLine(); // 처음 문장을 받을 배열
-
+			list = new ArrayList<>();
+			
 			rotation(str, N);
 			calculator(ans, K);
 
 			System.out.println("#" + index + " " + result);
 		}
-
 	}
 
 	static void rotation(String str, int N) {
@@ -66,18 +66,18 @@ public class treasureBox_password {
 
 	static void calculator(String[] ans, int k) {
 		String tmp;
-		pq = new PriorityQueue<>(comparator);
 
-		// 우선순위큐에 내림차순으로 삽입
-		for (int i = 0; i < ans.length; i++) {
-			tmp = ans[i];
-			pq.offer(Integer.parseInt(tmp, 16));
+		// list에 삽입
+		for (String s : ans) {
+			tmp = s;
+			if(!list.contains(Long.parseLong(tmp,16)) && Long.parseLong(tmp, 16) > 0) {
+				list.add(Long.parseLong(tmp, 16));
+			}
 		}
+
+		list.sort(Collections.reverseOrder());
 		
-		System.out.println(pq);
-		// 결과값을 k번째 추출
-		for (int i = 0; i < k; i++) {
-			result = pq.poll();
-		}
+		// k번째 값 추출
+		result = list.get(k - 1);
 	}
 }
