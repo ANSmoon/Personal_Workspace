@@ -32,8 +32,8 @@ public class cheeze_thief {
 			matrix = new int[N][N];
 			result = 0;
 			BEST = 0;
-			MAX = 0;
 			LOW = 100;
+			MAX = 0;
 
 			for (int i = 0; i < N; i++) {
 				token = new StringTokenizer(reader.readLine());
@@ -49,7 +49,7 @@ public class cheeze_thief {
 			}
 			
 			// 각 날짜별로 dfs 시행
-			for (int k = LOW; k < BEST; k++) {
+			for (int k = LOW - 1; k < BEST; k++) {
 				result = 0;
 				visited = new boolean[N][N];
 				for (int i = 0; i < N; i++) {
