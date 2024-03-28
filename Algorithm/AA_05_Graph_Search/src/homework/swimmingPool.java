@@ -60,6 +60,7 @@ public class swimmingPool {
 			return;
 		}
 		
+		
 		check(cnt + 1, sum + (list.get(cnt) * cost[0])); // 하루 이용권 사용
 		check(cnt + 1, sum + cost[1]); // 한달 이용권 사용
 		if(cnt < 10) {
