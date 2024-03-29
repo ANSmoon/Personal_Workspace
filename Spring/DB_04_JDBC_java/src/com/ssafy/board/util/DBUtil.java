@@ -2,8 +2,6 @@ package com.ssafy.board.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -18,7 +16,7 @@ public class DBUtil {
 	// DB와 연결하기위해 필요한 DB의 URL
 	private final String url = "jdbc:mysql://localhost:3306/ssafy_board?serverTimezone=UTC";
 	// DB의 USER 이름
-	private final String username = "ssafy";
+	private final String username = "root";
 	// 위 USER의 PASSWORD
 	private final String password = "ssafy";
 	// Mysql 드라이버 클래스 이름
@@ -51,45 +49,6 @@ public class DBUtil {
     	return DriverManager.getConnection(url, username, password);
     }
 
-	public static void close(Connection conn, PreparedStatement pstmt) {
-		try {
-			if (pstmt != null)
-				pstmt.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			if (conn != null)
-				conn.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {
-		try {
-			if (rs != null)
-				rs.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			if (pstmt != null)
-				pstmt.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			if (conn != null)
-				conn.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	
 	/**
      * 사용한 리소스들을 정리한다.
      * Connection, Statement, ResultSet 모두 AutoCloseable 타입이다.

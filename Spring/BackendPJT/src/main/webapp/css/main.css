@@ -1,0 +1,197 @@
+
+.noto-serif {
+    font-family: "Hahmlet", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+  
+/* 모든 요소의 css 기본 설정 초기화 하기 위한 선택자 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 여백 까지 박스 사이즈에 포함 하기  */
+    box-sizing: border-box;
+    /* 리스트 요소의 스타일을 없앤다. (기본 : 점) */
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+a {
+    /* 앵커 태그의 text 스타일을 없앤다. */
+    text-decoration: none;
+    /* 글자색 설정 */
+    color: whitesmoke;
+}
+
+body {
+    padding-top: 70px;
+}
+
+header.header {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 0px 8px 0px #888;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    font-size: 2em;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.header-nav > a {
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-nav > div > a {
+    color: #999;
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+#main-img img{
+    width: 100vw;
+}
+
+#main-img {
+    margin-bottom: 3%;
+}
+
+main .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+main .search input {
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: #888;
+    padding: 10px;
+    width: 50%;
+}
+
+main .sectionnn {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+}
+
+section.video-list-box {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 1%;
+
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+.sectionnn p {
+    margin-bottom: 5px;
+}
+
+ul {
+    display: flex;
+    gap: 20px 2%;
+    flex-wrap: wrap;
+}
+
+li.video {
+    margin: 10px;
+    max-width: 400px;
+    width: 30%;
+}
+
+li.video .video-img img {
+    width: 100%;
+}
+
+.video-img:active,
+.video-img:focus,
+.video-img:hover {
+    cursor: pointer;
+}
+
+.buttons button {
+    border: none;
+    background-color: #888;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 0.4em 1em;
+    border-radius: 16px;
+}
+
+.buttons button:hover {
+    background-color: #333;
+}
+
+.buttons button:active,
+.buttons button:focus {
+    background-color: #1687EF;
+}
+
+.video-info {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+.video-info .video-title {
+    width: 83%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #333;
+}
+
+.video-info .video-btn {
+    background-color: #1687EF;
+    color: #fff;
+    padding: 0.15em 0.7em;
+    font-size: 0.9em;
+    border-radius: 16px;
+}
+
+.video-info .video-channel {
+    color: #888;
+}
+
+
+footer {
+    position: absolute;
+    background-color: #888;
+    width: 100%;
+    height: 100px;
+}
+
+footer div ul {    
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div ul a,
+footer div ul li {    
+    color: #333;
+    font-size: 1.3rem;
+    line-height: 60px;
+    margin: auto;
+}

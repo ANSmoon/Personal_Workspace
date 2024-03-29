@@ -1,6 +1,7 @@
 package com.ssafy.board.model.dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,21 +9,23 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.cj.util.Util;
 import com.ssafy.board.model.dto.Board;
 import com.ssafy.board.util.DBUtil;
 
+//싱글턴으로 관리할것
 public class BoardDaoImpl implements BoardDao {
-
-	// DB 관련 file 가져오기
+	// DB관련 파일 가져오기
 	private final DBUtil dbUtil = DBUtil.getInstance();
 	private static BoardDao instance = new BoardDaoImpl();
-	
+
 	private BoardDaoImpl() {
 	}
-	
+
 	public static BoardDao getInstance() {
 		return instance;
 	}
+
 	@Override
 	public List<Board> selectAll() {
 		List<Board> list = new ArrayList<>();
@@ -30,16 +33,14 @@ public class BoardDaoImpl implements BoardDao {
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
-
 		try {
 			conn = dbUtil.getConnection();
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(sql);
 
 			while (rs.next()) {
-				Board board = new Board(); // 바구니 bean 게시글 준비
-				board.setId(rs.getInt("id"));
-//				board.setId(rs.setInt(1)); // index 1부터 시작
+				Board board = new Board(); // 바구니 빈 게시글 준비
+				board.setId(rs.getInt("id")); // 컬럼명
 				board.setWriter(rs.getString("writer"));
 				board.setTitle(rs.getString("title"));
 				board.setContent(rs.getString("content"));
@@ -53,6 +54,7 @@ public class BoardDaoImpl implements BoardDao {
 		} finally {
 			dbUtil.close(rs, stmt, conn);
 		}
+
 		return list;
 	}
 
@@ -60,18 +62,18 @@ public class BoardDaoImpl implements BoardDao {
 	public Board selectOne(int id) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		Statement stmt = null;
 		ResultSet rs = null;
-		
+
+//		String sql = "SELECT * FROM board WHERE id="+id;
 		String sql = "SELECT * FROM board WHERE id=?";
-		
-		Board board = new Board();
-		
+
+		Board board = null;
+
 		try {
 			conn = dbUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
+
 			pstmt.setInt(1, id);
-			
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				board = new Board();
@@ -82,13 +84,11 @@ public class BoardDaoImpl implements BoardDao {
 				board.setViewCnt(rs.getInt(5));
 				board.setRegDate(rs.getString(6));
 			}
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			dbUtil.close(rs, pstmt, conn);
 		}
-		
 		return board;
 	}
 
@@ -96,100 +96,103 @@ public class BoardDaoImpl implements BoardDao {
 	public void insertBoard(Board board) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		
-		String sql = "INSERT INTO board (title, writer, content) VALUES(?,?,?)";
-		
+		// 아래의 방식은 너무 복잡해잉
+//		String sql = "INSERT INTO board (title, writer, content) VALUES ('"+board.getTitle()";
+		String sql = "INSERT INTO board (title, writer, content) VALUES (?,?,?)";
+
 		try {
 			conn = dbUtil.getConnection();
-			
+
 			// AutoCommit 해제
 			conn.setAutoCommit(false);
-			
-			
+
 			pstmt = conn.prepareStatement(sql);
-			
-			pstmt.setString(1,board.getTitle());
-			pstmt.setString(2,board.getWriter());
-			pstmt.setString(3,board.getContent());
-			
+
+			pstmt.setString(1, board.getTitle());
+			pstmt.setString(2, board.getWriter());
+			pstmt.setString(3, board.getContent());
+
 			int result = pstmt.executeUpdate();
 			System.out.println(result);
-			
-			conn.commit();
-			
+
+			conn.commit(); // 지금까지 한거 반영해~~
+
 		} catch (SQLException e) {
-			e.printStackTrace();
-		}finally {
+//			conn.rollback();
+		} finally {
 			dbUtil.close(pstmt, conn);
 		}
+
 	}
 
 	@Override
 	public void deleteBoard(int id) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-
 		String sql = "DELETE FROM board WHERE id = ?";
 		
 		try {
 			conn = dbUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			
-			pstmt.setInt(1,id);
+
+			pstmt.setInt(1, id);
+
 			pstmt.executeUpdate();
-			conn.commit();
-			
+			conn.commit(); // 지금까지 한거 반영해~~
+
 		} catch (SQLException e) {
-//			e.printStackTrace();
-		}finally {
+//			conn.rollback();
+		} finally {
 			dbUtil.close(pstmt, conn);
 		}
-		
 	}
 
 	@Override
 	public void updateBoard(Board board) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "UPDATE board SET title = ?, content = ? WHERE id = ?";
-
+		String sql = "UPDATE board SET title=?, content=? WHERE id=?";
+		
 		try {
 			conn = dbUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
-				
-			pstmt.setString(1,board.getTitle());
-			pstmt.setString(2,board.getContent());
-			pstmt.setInt(3,board.getId());
 			
+			pstmt.setString(1, board.getTitle());
+			pstmt.setString(2, board.getContent());
+			pstmt.setInt(3, board.getId());
+
 			pstmt.executeUpdate();
-			conn.commit();
-			
+			conn.commit(); // 지금까지 한거 반영해~~
+
 		} catch (SQLException e) {
-//			e.printStackTrace();
-		}finally {
+//			conn.rollback();
+		} finally {
 			dbUtil.close(pstmt, conn);
 		}
+
 	}
 
 	@Override
 	public void updateViewCnt(int id) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql = "UPDATE board SET view_cnt = view_cnt + 1 WHERE id = ?";
-
+		String sql = "UPDATE board SET view_cnt = view_cnt+1 WHERE id=?";
+		
 		try {
 			conn = dbUtil.getConnection();
 			pstmt = conn.prepareStatement(sql);
-				
-			pstmt.setInt(1,id);
 			
+			pstmt.setInt(1, id);
+
 			pstmt.executeUpdate();
-			conn.commit();
-			
+			conn.commit(); // 지금까지 한거 반영해~~
+
 		} catch (SQLException e) {
-//			e.printStackTrace();
-		}finally {
+//			conn.rollback();
+		} finally {
 			dbUtil.close(pstmt, conn);
 		}
+
 	}
+
 }
