@@ -1,0 +1,1 @@
+import java.util.*;class no_31668{public static void main(String[]args)throws Exception{Scanner x=new Scanner(System.in);System.out.println((int)(1/((x.nextDouble())/x.nextInt()))*x.nextInt());}}
