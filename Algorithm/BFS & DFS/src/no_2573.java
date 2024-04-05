@@ -46,21 +46,22 @@ public class no_2573 {
 		// 2등분 될때까지 수행
 		while (result < 2) {
 			search(); // 주변 물 탐색
-
 			if (queue.isEmpty()) {
 				break;
 			}
 
 			melt(); // 얼음 녹이기
-			search(); // 안녹은 위치 파악
 			size = queue.size();
 			visited = new boolean[N][M];
 			result = 0;
 			for (int i = 0; i < size; i++) {
 				int[] pos = queue.poll();
 				if (!visited[pos[0]][pos[1]]) {
-					dfs(pos[0], pos[1]); // 등분 파악
 					result++;
+					if (result >= 2) {
+						break;
+					}
+					dfs(pos[0], pos[1]); // 등분 파악
 				}
 			}
 			day++;
@@ -95,8 +96,9 @@ public class no_2573 {
 	// 얼음 녹이기
 	public static void melt() {
 		int[] arr;
+		size = queue.size();
 
-		while (!queue.isEmpty()) {
+		for (int i = 0; i < size; i++) {
 			arr = queue.poll();
 			int x = arr[0];
 			int y = arr[1];
@@ -106,6 +108,7 @@ public class no_2573 {
 				matrix[x][y] = 0;
 			} else {
 				matrix[x][y] -= count;
+                queue.offer(arr);
 			}
 		}
 	}
