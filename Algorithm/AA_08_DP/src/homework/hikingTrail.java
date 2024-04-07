@@ -2,11 +2,11 @@
  * Author : 문범수
  * Date : 2024-04-01
  * subject : 
- * main : 
- * issue : 
- * name : .java
- * duration : m
- * CodeNo : 
+ * main : DFS
+ * issue : visited 처리 오류
+ * name : hikingTrail.java
+ * duration : 300m
+ * CodeNo : 1949
  */
 
 package homework;
@@ -57,11 +57,13 @@ public class hikingTrail {
 					}
 				}
 			}
-
+			
 			for (int i = 0; i < list.size(); i = i + 2) {
 				int row = list.get(i);
 				int col = list.get(i + 1);
+				visited[row][col] = true;
 				dfs(row, col, 1, 0);
+				visited[row][col] = false;
 			}
 			System.out.println("#" + index + " " + result + " ");
 		}
@@ -70,7 +72,6 @@ public class hikingTrail {
 	// depth : 등산로 길이
 	// cnt : 낮춘 횟수
 	static void dfs(int row, int col, int depth, int cnt) {
-		visited[row][col] = true;
 		result = Math.max(result, depth);
 
 		for (int k = 0; k < 4; k++) {
@@ -79,6 +80,7 @@ public class hikingTrail {
 			if (x >= 0 && y >= 0 && x < N && y < N && !visited[x][y]) {
 				// 높이가 낮은 경우
 				if (matrix[row][col] > matrix[x][y]) {
+					visited[x][y] = true;
 					dfs(x, y, depth + 1, cnt);
 					visited[x][y] = false;
 				}
@@ -86,14 +88,15 @@ public class hikingTrail {
 				// 높이를 높거나 같은 경우
 				else {
 					// 이미 낮춘 경우 불가능
-					if (cnt >= 1) {
+					if (cnt == 1) {
 						continue;
-					} 
+					}
 					else{
 						// 낮출수 있는경우
 						// 높이가 같은 경우
 						if (matrix[x][y] == matrix[row][col]) {
 							matrix[x][y]--;
+							visited[x][y] = true;
 							dfs(x, y, depth + 1, cnt + 1);
 							matrix[x][y]++;
 							visited[x][y] = false;
@@ -103,11 +106,12 @@ public class hikingTrail {
 						// 여기 K값을 고려한 빼기가 이뤄져야함
 						else {
 							int tmp = matrix[x][y];
-							if(matrix[row][col] - 1 <= K) {
+							if(matrix[x][y] - (matrix[row][col] - 1) <= K) {
 								matrix[x][y] = matrix[row][col] - 1;
 							}else {
-								matrix[x][y] = matrix[x][y] - K;
+								continue;
 							}
+							visited[x][y] = true;
 							dfs(x, y, depth + 1, cnt + 1);
 							matrix[x][y] = tmp;
 							visited[x][y] = false;
