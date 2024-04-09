@@ -13,5 +13,4 @@ public interface UserDao {
 	List<User> selectAll();
 
 	List<User> searchByName(String name);
-
 }

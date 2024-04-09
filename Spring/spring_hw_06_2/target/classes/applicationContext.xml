@@ -6,6 +6,7 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- dataSource bean 등록 -->
 	<bean id="dataSource"
 		class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName"
@@ -17,6 +18,7 @@
 	</bean>
 
 	<!-- MyBatis를 사용하기 위한 sqlSessionFactory를 등록한다. -->
+	<!-- SqlSessionFactory bean 등록 -->
 	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -30,5 +32,4 @@
 	<!-- mybatis에서 제공하는 scan 태그를 통해 dao interface들의 위치를 지정한다. -->
 	<mybatis-spring:scan
 		base-package="com.ssafy.hw.model.dao" />
-
 </beans>

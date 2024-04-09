@@ -25,9 +25,8 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class UserController {
 	
-	// resource 경로를 가져오기위해 ResourcesLoader를 주입받는다.
 	@Autowired
-	ResourceLoader resLoader;
+	private final UserController userController;
 	
 	/**
 	 * '/' 또는 '/index' 요청이 get 방식으로 들어왔을 때 index로 연결한다.
