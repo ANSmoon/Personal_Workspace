@@ -6,7 +6,7 @@
  * main : BFS + 구현
  * issue : 생명력 기간동안 살아있다는 정보를 놓침
  * name : stemCellCulture.java
- * duration : 60m
+ * duration : 240m
  * CodeNo : 5653
  */
 
@@ -40,9 +40,10 @@ public class stemCellCulture {
 			colSize = M + (2 * K);
 			// N행 M열의 행렬이 K시간동안 최대로 퍼질수 있는 크기는 중앙에서 2K씩 늘어난 경우
 			matrix = new int[rowSize][colSize];
-			visited = new int[rowSize][colSize];
-			queue = new LinkedList<>();
+			visited = new int[rowSize][colSize]; // 현재 시간을 입력함
+
 			remain = new LinkedList<>();
+			queue = new LinkedList<>();
 
 			// 중앙에 배치하도록 설정
 			for (int i = K; i < K + N; i++) {
@@ -52,8 +53,7 @@ public class stemCellCulture {
 					if (matrix[i][j] > 0) {
 						visited[i][j] = 500; // 맨 처음 위치는 500으로 설정
 						// x좌표, y좌표, 생명력, 활성화까지 남은 시간
-						queue.offer(new int[] { i, j, matrix[i][j], matrix[i][j] });
-						remain.offer(new int[] { i, j, matrix[i][j]});
+						queue.offer(new int[] { i, j, matrix[i][j], matrix[i][j], matrix[i][j] });
 					}
 				}
 			}
@@ -63,7 +63,7 @@ public class stemCellCulture {
 	}
 
 	static void bfs() {
-		for (int i = 0; i < K; i++) {
+		for (int i = 1; i <= K; i++) {
 			int cycle = queue.size(); // K시간동안 Queue에 현재 들어있는 만큼만 돌것
 			for (int j = 0; j < cycle; j++) {
 				int[] pos = queue.poll();
@@ -89,15 +89,19 @@ public class stemCellCulture {
 							}
 						}
 					}
+					if(totalLife > 1) {
+						queue.offer(new int[] {row, col, totalLife - 1, remainLife});
+					}
 				} else { // 활성시간에 도달하지 않았을 경우
-					queue.offer(new int[] { row, col, totalLife, remainLife - 1 });
+					queue.offer(new int[] { row, col, totalLife, remainLife - 1});
 				}
 			}
-			// 해당 시간대에 채워진 녀석들을 다시 넣어준다.(순서 상관 X)
+
+			// 현재 생명력이 남아있는 녀석들을 넣어준다.(순서 상관 X)
 			for (int l = 0; l < rowSize; l++) {
 				for (int m = 0; m < colSize; m++) {
 					if (visited[l][m] == i) {
-						queue.offer(new int[] { l, m, matrix[l][m], matrix[l][m] });
+						queue.offer(new int[] { l, m, matrix[l][m], matrix[l][m], matrix[l][m] - 1});
 					}
 				}
 			}
