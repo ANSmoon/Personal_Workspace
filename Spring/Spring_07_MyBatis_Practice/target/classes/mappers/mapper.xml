@@ -4,16 +4,16 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 네임스페이스에 DAO 풀패키지명을 작성 -->
-<mapper namespace="com.ssafy.model.dao.BoardDao">
+<mapper namespace="com.ssafy.board.model.dao.BoardDao">
 	<resultMap type="Board" id="boardMap">
-		<result column="id" property="int" />
+		<result column="id" property="id" />
 		<result column="writer" property="writer" />
 		<result column="title" property="title" />
 		<result column="content" property="content" />
 		<result column="view_cnt" property="viewCnt" />
 		<result column="reg_date" property="regDate" />
 	</resultMap>
-
+	
 	<!-- 전체 게시글 조회 -->
 	<select id="selectAll" resultMap="boardMap">
 		SELECT id, writer, title, content, view_cnt, date_format(reg_date,
@@ -35,7 +35,7 @@
 	<!-- 게시글 삭제 -->
 	<delete id="deleteBoard" parameterType="int">
 		DELETE FROM board
-		WHREE id = #{id};
+		WHERE id = #{id};
 	</delete>
 
 	<!-- 조회수 증가 -->

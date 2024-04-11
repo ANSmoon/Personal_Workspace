@@ -83,6 +83,7 @@ public class swimmingContest {
 //				System.out.println(Arrays.toString(finish));
 //				System.out.print(" result : " + result);
 				result = Math.min(timer, result);
+				return;
 			}
 			
 			// 현재 위치에서 4방 탐색 진행
