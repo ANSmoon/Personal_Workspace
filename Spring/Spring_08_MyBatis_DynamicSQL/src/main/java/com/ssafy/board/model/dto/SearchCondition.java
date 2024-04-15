@@ -41,9 +41,4 @@ public class SearchCondition {
 		this.orderByDir = orderByDir;
 	}
 
-	@Override
-	public String toString() {
-		return "SearchCondition [key=" + key + ", word=" + word + ", orderBy=" + orderBy + ", orderByDir=" + orderByDir
-				+ "]";
-	}
 }
