@@ -12,7 +12,6 @@ public class PersonManager {
 	private static PersonManager manager = new PersonManager();
 
 	private PersonManager() {
-
 	}
 
 	public static PersonManager getInstance() {
