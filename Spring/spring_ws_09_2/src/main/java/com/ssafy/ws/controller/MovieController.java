@@ -69,7 +69,14 @@ public class MovieController {
 		// UserService를 통해 사용자 계정을 가져온다.
 		//코드작성
 			User loginUser = uService.select(user.getId());
-			if (loginUser != null && user.getPass().equals(loginUser.getPass())) {
+			System.out.println(user);
+//			System.out.println(loginUser.getId());
+//			System.out.println(loginUser.getPassword());
+//			System.out.println(user.getId());
+//			System.out.println(user.getPassword());
+			System.out.println("여기는 통과함");
+			if (loginUser != null && user.getPassword().equals(loginUser.getPassword())) {
+				System.out.println("여기서 오류 발생");
 				session.setAttribute("loginUser", loginUser);
 				return "redirect:/index";
 			} else {

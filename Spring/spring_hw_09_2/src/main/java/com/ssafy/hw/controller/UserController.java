@@ -130,7 +130,7 @@ public class UserController {
 	@PostMapping("/login")
 	public String doLogin(User user, HttpSession session, Model model) {
 		String view = "/index";
-
+		System.out.println(user);
 		User loginUser = service.searchById(user.getId());
 		if (loginUser != null && user.getPassword().equals(loginUser.getPassword())) {
 			session.setAttribute("loginUser", loginUser);
