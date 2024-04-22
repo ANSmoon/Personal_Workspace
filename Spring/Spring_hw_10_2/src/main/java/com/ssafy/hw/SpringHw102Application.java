@@ -18,5 +18,4 @@ public class SpringHw102Application implements WebMvcConfigurer {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringHw102Application.class, args);
 	}
-
 }

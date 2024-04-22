@@ -7,4 +7,13 @@ import com.ssafy.hw.model.dto.User;
 
 public interface UserDao {
 	
+	int insert(User user);
+	
+	User searchById(String id);
+	
+	User searchByName(String name);
+
+	List<User> selectAll();
+	
+	List<User> searchByCondition(SearchCondition con);
 }
