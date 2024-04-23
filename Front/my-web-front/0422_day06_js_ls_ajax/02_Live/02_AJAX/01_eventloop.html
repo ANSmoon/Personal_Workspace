@@ -10,29 +10,37 @@
 <body>
   <h1>EventLoop</h1>
   <script>
-    
-    // 순서대로 출력해보기
-    // Hi
-    // a
-    // b
-    // c
-    // d
-    // Bye
+    console.log("Hi") 
 
-    
-    // 코드를 작성하세요.
+    setTimeout(function(){
+      console.log("Bye")
+    }, 5000)
+    setTimeout(function(){
+      console.log("d")
+    }, 4000)
+    setTimeout(function(){
+      console.log("b")
+    }, 2000)
+    setTimeout(function(){
+      console.log("c")
+    }, 3000)
+    setTimeout(function(){
+      console.log("a")
+    }, 0)
 
-    // setTimeout(function(){}) 사용해보기
-    
 
-
-    // 바탕화면 색상 바꿔보기
-    // setInterval(() => {
-      // 코드를 작성하세요.
-
-      // document.body.style.background
-    // }, 1000)
-    
+    // 눈 아파요 조심
+    setInterval(() => {
+      let bgColor = document.body.style.background;
+      if(bgColor === "red"){
+        document.body.style.background = "yellow";
+      }else if(bgColor === "skyblue") {
+        document.body.style.background = "red";
+      }
+      else{
+        document.body.style.background = "skyblue";
+      }
+    }, 1000)
     
 
   </script>

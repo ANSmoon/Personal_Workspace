@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link를 해주지 않으면 스타일이 적용되지 않는다. -->
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <!-- 홈으로 갈 수 있는 로고와 검색을 위한 form, 메뉴들의 링크 작성 -->
+    <header>
+        <nav class="header-nav">
+            <div class="header-nav-logo">
+                <a href="index.html">영화관리</a>
+            </div>
+            <form name="profile" action="#">
+                <div class="header-nav-search">
+                    <input type="text" placeholder="제목을 입력하시오." />
+                    <input type="submit" value="검색" />
+                </div>
+            </form>
+            <nav class="header-nav-menu">
+                <span><a href="login.html">Login</a></span>
+                <span><a href="index.html">Logout</a></span>
+                <span><a href="register.html">회원가입</a></span>
+                <span><a href="#">게시판</a></span>
+                <span><a href="#">마이페이지</a></span>
+            </nav>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-movie-list">
+            <!-- 비정렬 리스트-->
+            <!-- 영화 목록 -->
+            <h3>영화목록</h3>
+            <ul class="content-user-list-ul">
+
+            </ul>
+            <!-- 영화 찜 리스트 작성 -->
+
+        </section>
+
+        <aside>
+            <h3>찜리스트</h3>
+            <ul class="wishlist-container"></ul>
+        </aside>
+    </main>
+
+    <!-- 이용약관 / 오시는 길 -->
+    <footer>
+        <ul>
+            <li><a href="https://www.naver.com">개인정보처리방침</a></li>
+            <li><a href="https://finance.naver.com/">이용약관</a></li>
+            <li><a href="https://map.naver.com/">오시는길</a></li>
+            <li>&copy; SSAFY 대전_4반_문범수</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -11,13 +11,13 @@
     const URL = 'https://jsonplaceholder.typicode.com/todos/1'
 
     //AJAX 통신 시작
-    
+    const xhr = new XMLHttpRequest()
 
     //xhr 보내기 위해서 open 메서드를 활용
-    
+    xhr.open('GET', URL)
     //요청 보내기
+    xhr.send() 
 
-    
     xhr.onreadystatechange = function() {
       if(xhr.readyState == xhr.DONE){
         if(xhr.status == 200 ){

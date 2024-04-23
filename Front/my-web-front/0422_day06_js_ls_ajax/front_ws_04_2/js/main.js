@@ -37,47 +37,21 @@ function handler(event) {
   console.log("상영 시간:", movieDuration);
   console.clear;
 
-
-
-//   // 모든 movie class를 가진 div 요소들을 선택
-//   const movieDivs = document.querySelectorAll(".movie");
-
-//   // 각 .movie 요소마다 자식 div 요소들을 선택
-//   movieDivs.forEach(function(movieDiv) {
-//   const childDivs = movieDiv.querySelectorAll('div');
-
-//   // 각 자식 div 요소에 대한 작업을 수행
-//   childDivs.forEach(function(div) {
-//       // 각 요소에 대한 작업을 수행
-//       console.log(div);
-//   });
-// });
-
-
-
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  // 찜 리스트를 가져옵니다.
-  const likedMovies = JSON.parse(localStorage.getItem("likedMovies"));
-
   // 찜 리스트가 비어있는 경우 메시지를 표시합니다.
   if (!likedMovies || likedMovies.length === 0) {
-      const aside = document.querySelector("aside");
-      aside.innerHTML = "<h3>찜리스트</h3>아직 찜한 영화가 없습니다....";
-      return;
+    const aside = document.querySelector("aside");
+    aside.innerHTML = "<h3>찜리스트</h3>아직 찜한 영화가 없습니다....";
+    return;
   }
 
-  // 찜 리스트가 비어있지 않은 경우 각 영화 정보를 출력합니다.
-  const aside = document.querySelector("aside");
-  const ul = document.createElement("ul");
-
-  likedMovies.forEach(function(movie) {
-      const li = document.createElement("li");
-      li.textContent = `${movie.title} - ${movie.genre} - ${movie.director} - ${movie.duration}분`;
-      ul.appendChild(li);
-  });
-
-  aside.innerHTML = "<h3>찜리스트</h3>";
-  aside.appendChild(ul);
-});
+    // 찜 리스트가 비어있지 않은 경우 각 영화 정보를 출력합니다.
+    const aside = document.querySelector("aside");
+    const ul = document.createElement("ul");
+  
+    likedMovies.forEach(function(movie) {
+        const li = document.createElement("li");
+        li.textContent = `${movie.title} - ${movie.genre} - ${movie.director} - ${movie.duration}`;
+        ul.appendChild(li);
+    });
+    aside.appendChild(ul);
+}

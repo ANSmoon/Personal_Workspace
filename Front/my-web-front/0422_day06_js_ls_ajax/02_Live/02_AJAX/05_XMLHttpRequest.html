@@ -12,12 +12,14 @@
     <script>
       //껍데기
       let xhr
-
       //textarea 태그를 가지고 왔다.
       let studentArea = document.getElementById('student')
 
       function requestMsg() {
-        // 코드를 작성하세요. 
+        xhr = new XMLHttpRequest()
+        xhr.onreadystatechange = callbackFunc
+        xhr.open('GET', './data/students.json')
+        xhr.send()
       }
 
       function callbackFunc() {

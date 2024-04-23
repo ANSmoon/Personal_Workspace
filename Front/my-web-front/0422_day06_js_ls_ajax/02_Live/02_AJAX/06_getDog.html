@@ -14,21 +14,37 @@
 
     // 댕댕이 보여주기 위한 콜백함수 
     function getDog() {
-      // 코드를 작성하세요.
-      
+      const xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function() {
+        if(xhr.readyState == xhr.DONE){
+          if(xhr.status == 200){
+            // console.log(JSON.parse(xhr.response).message)
+            // console.log(JSON.parse(xhr.response)['message'])
+            const imgSrc = JSON.parse(xhr.response)['message']
+
+            const imgTag = document.querySelector("#dog-img")
+            imgTag.src = imgSrc;
+            // imgTag.setAttribute("src", imgSrc)
+          }
+         }
+        }
+
+      xhr.open("GET", URL)
+      xhr.send();
     }
 
-    // function getDog(){
-    //   axios.get(URL)
-    //   .then((response) => {
-    //     const imgSrc = response.data.message;
-    //     document.querySelector("#dog-img").setAttribute("src", imgSrc)
-    //   })
-    // }
+      // function getDog(){
+      //   axios.get(URL)
+      //   .then((response) => {
+      //     const imgSrc = response.data.message;
+      //     document.querySelector("#dog-img").setAttribute("src", imgSrc)
+      //   })
+      // }
 
-    // 클라이언트에서 요소 선택 
 
-    // 이벤트 생성
+    const btn = document.querySelector("#btn")
+    btn.addEventListener("click", getDog)
   </script>
 </body>
 </html>

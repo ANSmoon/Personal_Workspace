@@ -7,9 +7,8 @@ const btnAll = document.querySelector('#btn-all')
 
 let todoList
 
-
 window.addEventListener('load', function () {
-  todoList = localStorage.getItem('todoList')
+  todoList = localStorage.getItem('todoList') // string
 
   if (todoList !== null) {
     todoList = JSON.parse(todoList)
