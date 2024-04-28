@@ -6,5 +6,4 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan(basePackages = "com.ssafit.movie.dao")
 public class DBConfig {
-
 }
