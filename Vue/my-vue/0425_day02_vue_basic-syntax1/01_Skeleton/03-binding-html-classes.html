@@ -22,21 +22,21 @@
     
     <!-- 1. Binding to Objects -->
     <!-- 1-a div.  -->
-
+    <div :class="{ active: isActive }">Text</div>
     
     <!-- 1-b div.static.text-primary -객체, string 모두 활용 -->
-    
+    <div class="static" :class="{ active: isActive, 'text-primary': hasInfo }">Text</div>
     
     <!-- 1-c div.static.text-primary -ref unwrapping 활용 -->
-    
+    <div class="static" :class="classObj">Text</div>
     
     <!-- 2. Binding to Arrays -->
     <!-- 2-a div.active.crimson 만들기 -배열 구조분해 활용-->
-    <div class="active crimson">Karina</div>
-    <div :class="[activeClass, infoClass]"></div>
+    <div class="text-primary active">Karina</div> <!-- class 선언부 -->
+    <div :class="[activeClass, infoClass]">asd</div> <!-- class 동적 binding -->
     
     <!-- 2-b div.crimson -객체 구조분해, 변수 바로 활용 -->
-    <div class="crimson">KIA</div>
+    <div class="text-primary">KIA</div>
     <div :class="[{active : isActive}, infoClass]">KIA</div>
     
   </div>
@@ -48,7 +48,7 @@
     const app = createApp({
       setup(){
         const activeClass = ref("active")
-        const infoClass = ref("crimson")        
+        const infoClass = ref("text-primary")        
         const isActive = ref(false)
 
         return{
@@ -59,9 +59,6 @@
       }
     })
 app.mount("#app")
-
-    
   </script>
 </body>
-
 </html>
