@@ -21,9 +21,36 @@
 <script setuo>
   import { RouterLink, RouterView } from 'vue-router';
 
-
 </script>
 
 <style scoped>
+body * {
+  text-decoration: none;
+  color: black;
+}
+
+.app-description{
+  border : 1px solid black;
+  padding : 10px;
+  margin-bottom: 20px;
+}
+
+.app-header{
+  border : 1px solid black;
+  padding : 10px;
+  background-color: orange;
+  color: white;
+}
+
+.app-nav{
+  border : 1px solid black;
+  padding : 10px;
+}
+
+.quiz-app{
+  border : 1px solid black;
+  padding : 10px;
+  text-align: center;
+}
 
 </style>
