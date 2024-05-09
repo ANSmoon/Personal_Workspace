@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.ssafy.movie.model.dao.MovieDao">
+  	<!-- SELECT ALL -->
+  	<select id="selectAll" resultType="Movie">
+  		SELECT * FROM movies;
+  	</select>
+  	
+  	<!-- INSERT ONE -->
+  	<insert id="insertMovie" parameterType="Movie" keyProperty="id" useGeneratedKeys="true">
+  		INSERT INTO movies (title, director, genre, duration)
+  		VALUES (#{title}, #{director}, #{genre}, #{duration})
+  	</insert>
+  	
+  	<!-- DELETE ONE -->
+  	<delete id="deleteMovie" parameterType="int">
+  		DELETE FROM movies
+  		WHERE id = #{id}
+  	</delete>
+  	
+  	<!-- SELECT ONE -->
+  	<select id="selectOne" resultType="Movie" parameterType="int">
+  		SELECT * FROM movies WHERE id = #{id}
+  	</select>
+	
+  </mapper>

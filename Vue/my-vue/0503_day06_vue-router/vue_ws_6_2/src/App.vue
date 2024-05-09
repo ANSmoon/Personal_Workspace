@@ -39,7 +39,7 @@ body * {
   border : 1px solid black;
   padding : 10px;
   background-color: orange;
-  color: white;
+  
 }
 
 .app-nav{
