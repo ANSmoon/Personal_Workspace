@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -48,14 +49,14 @@ public class ReviewController {
 	}
 	
 	@PostMapping("/reviews/{movieId}")
-	public ResponseEntity<?> registReview(@PathVariable("movieId") int movieId, @ModelAttribute Review review){
+	public ResponseEntity<?> registReview(@PathVariable("movieId") int movieId, @RequestBody Review review){
 		review.setMovieId(movieId);
 		reviewService.registReview(review);
 		return new ResponseEntity<>(review, HttpStatus.ACCEPTED);
 	}
 	
 	@PutMapping("/reviews/{movieId}/{userId}")
-	public ResponseEntity<?> modifyReview(HttpSession session, @PathVariable("movieId") int movieId, @PathVariable("userId") String userId, @ModelAttribute Review review){
+	public ResponseEntity<?> modifyReview(HttpSession session, @PathVariable("movieId") int movieId, @PathVariable("userId") String userId, @RequestBody Review review){
 //		User nowId = (User) session.getAttribute("loginUser");
 		review.setUserId(userId);
 		review.setMovieId(movieId);

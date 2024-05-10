@@ -23,8 +23,8 @@ public class WebConfig implements WebMvcConfigurer{
 //		registry.addInterceptor(adminPageInterceptor).addPathPatterns("/users");
 //	}
 	
-//	@Override
-//	public void addCorsMappings(CorsRegistry registry) {
-//		registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET","POST");
-//	}
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET","POST");
+	}
 }
