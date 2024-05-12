@@ -33,12 +33,13 @@ public class ReviewServiceImpl implements ReviewService {
 
 	@Override
 	public int modifyReview(Review review) {
+		System.out.println(review.toString());
 		return reviewDao.updateReview(review);
 	}
 
 	@Override
-	public int deleteReview(int movieId, String userId) {
-		return reviewDao.deleteReview(movieId, userId);
+	public int deleteReview(int movieId, int reviewId, String userId) {
+		return reviewDao.deleteReview(movieId, reviewId, userId);
 	}
 
 

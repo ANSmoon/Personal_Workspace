@@ -44,8 +44,9 @@ public class MovieController {
 	@GetMapping("/movie/{id}")
 	@Operation(summary = "Id가 일치하는 영상 정보 반환", description = "특정 영상의 정보를 반환합니다.")
 	public ResponseEntity<Movie> search(@PathVariable("id") int id){
+		System.out.println(id);
 		Movie movie = movieService.searchMovie(id);
-		
+		System.out.println(movie);
 		return new ResponseEntity<Movie>(movie, HttpStatus.OK);
 	}
 

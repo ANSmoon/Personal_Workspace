@@ -15,7 +15,7 @@ public interface MovieDao {
 	public void updateViewCnt(int id);
 
 	// 특정 영상을 찾는 SQL 문
-	public Movie searchMovie();
+	public Movie searchMovie(int id);
 
 	public List<Movie> sectionAll(String category);
 
