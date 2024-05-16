@@ -6,7 +6,7 @@
             <tr>
                 <th>번호</th>
                 <th>제목</th>
-                <th>글쓴이</th>
+                <th>쓰니</th>
                 <th>조회수</th>
                 <th>등록일</th>
             </tr>
@@ -20,8 +20,8 @@
                 <td>{{ board.regDate }}</td>
             </tr>
         </table>
-        <hr>
-        <BoardSearchInput/>
+
+        <BoardSearchInput />
     </div>
 </template>
 
@@ -30,13 +30,11 @@ import { useBoardStore } from '@/stores/board';
 import { onMounted } from 'vue';
 import BoardSearchInput from './BoardSearchInput.vue';
 
+
 const store = useBoardStore()
 onMounted(() => {
-    store.getBoardList();
+    store.getBoardList()
 })
-
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

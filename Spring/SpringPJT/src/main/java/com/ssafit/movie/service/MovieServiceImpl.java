@@ -31,7 +31,7 @@ public class MovieServiceImpl implements MovieService {
 	@Override
 	public Movie searchMovie(int id) {
 		movieDao.updateViewCnt(id);
-		return movieDao.searchMovie();
+		return movieDao.searchMovie(id);
 	}
 
 	@Override

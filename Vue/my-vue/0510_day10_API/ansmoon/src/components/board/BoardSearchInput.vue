@@ -34,10 +34,11 @@
         </div>
     </div>
 </template>
-  
+
 <script setup>
 import { useBoardStore } from '@/stores/board';
 import { ref } from 'vue';
+
 
 const searchInfo = ref({
     key: 'none',
@@ -48,15 +49,13 @@ const searchInfo = ref({
 
 const store = useBoardStore()
 
-const searchBoardList = function(){
+const searchBoardList = function () {
     store.searchBoardList(searchInfo.value)
 }
-
 </script>
-  
+
 <style scoped>
 .search {
     display: flex;
 }
 </style>
-  

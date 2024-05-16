@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ssafit.movie.dto.Review;
-import com.ssafit.movie.dto.User;
 import com.ssafit.movie.service.ReviewService;
 
 import jakarta.servlet.http.HttpSession;
@@ -34,7 +33,7 @@ public class ReviewController {
 	@GetMapping("/reviews/{movieId}")
 	public ResponseEntity<List<Review>> reviewList(@PathVariable("movieId") int movieId){
 		List<Review> list = reviewService.getListByMovie(movieId);
-		System.out.println(list);
+//		System.out.println(list);
 		if(list.isEmpty()) {
 			return new ResponseEntity<List<Review>>(HttpStatus.NO_CONTENT);
 		}
@@ -69,12 +68,12 @@ public class ReviewController {
 //		return new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
 	}
 	
-	@DeleteMapping("reviews/{movieId}/{userId}")
-	public ResponseEntity<?> deleteReview(@PathVariable("movieId") int movieId, @PathVariable("userId") String userId){
+	@DeleteMapping("reviews/{movieId}/{reviewId}/{userId}")
+	public ResponseEntity<?> deleteReview(@PathVariable("movieId") int movieId, @PathVariable("reviewId") int reviewId, @PathVariable("userId") String userId){
 //		User nowId = (User) session.getAttribute("loginUser");
 		
 //		if(nowId.getId() == userId) {
-			reviewService.deleteReview(movieId, userId);
+			reviewService.deleteReview(movieId, reviewId, userId);
 			return new ResponseEntity<>(HttpStatus.OK);
 //		}
 	}

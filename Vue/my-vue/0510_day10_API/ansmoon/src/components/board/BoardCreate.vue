@@ -24,19 +24,20 @@
 
 <script setup>
 import { useBoardStore } from '@/stores/board';
-import { ref } from 'vue'
-
-const board = ref({
-    title:'',
-    writer:'',
-    content:'',
-})
+import { ref } from 'vue';
 
 const store = useBoardStore()
+
+const board = ref({
+    title: '',
+    writer: '',
+    content: ''
+})
 
 const createBoard = function () {
     store.createBoard(board.value)
 }
+
 </script>
 
 <style scoped></style>

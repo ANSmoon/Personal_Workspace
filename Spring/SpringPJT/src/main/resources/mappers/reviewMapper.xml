@@ -22,11 +22,11 @@
 	<update id="updateReview" parameterType="Review">
 		UPDATE reviews
 		SET title = #{title}, content = #{content}
-		WHERE movie_id = #{movieId} AND user_id = #{userId}
+		WHERE movie_id = #{movieId} AND id = #{id} AND user_id = #{userId}
 	</update>
 	
 	<delete id="deleteReview">
 		DELETE FROM reviews
-		WHERE movie_id = #{movieId} AND user_id = #{userId}
+		WHERE movie_id = #{movieId} AND id = #{reviewId} AND user_id = #{userId}
 	</delete>
 </mapper>

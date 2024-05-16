@@ -3,14 +3,17 @@ import HomeView from '../views/HomeView.vue'
 import YoutubeView from '@/views/YoutubeView.vue'
 import BoardView from '@/views/BoardView.vue'
 
-import BoardList from '@/components/board/BoardList.vue'
 import BoardCreate from '@/components/board/BoardCreate.vue'
+import BoardList from '@/components/board/BoardList.vue'
 import BoardUpdate from '@/components/board/BoardUpdate.vue'
 import BoardDetail from '@/components/board/BoardDetail.vue'
+
 import KakaoView from '@/views/KakaoView.vue'
+
 import TmdbView from '@/views/TmdbView.vue'
 import TmdbPopular from '@/components/tmdb/TmdbPopular.vue'
 import TmdbTopRated from '@/components/tmdb/TmdbTopRated.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,25 +32,25 @@ const router = createRouter({
       path: '/board',
       name: 'board',
       component: BoardView,
-      children:[
+      children: [
         {
-          path:'',
-          name:'boardList',
+          path: '',
+          name: 'boardList',
           component: BoardList
         },
         {
-          path:'create',
-          name:'boardCreate',
+          path: 'create',
+          name: 'boardCreate',
           component: BoardCreate
         },
         {
-          path:'update',
-          name:'boardUpdate',
+          path: 'update',
+          name: 'boardUpdate',
           component: BoardUpdate
         },
         {
-          path:':id',
-          name:'boardDetail',
+          path: ':id',
+          name: 'boardDetail',
           component: BoardDetail
         },
       ]
@@ -71,8 +74,7 @@ const router = createRouter({
           path: "toprated",
           name: "tmdbTopRated",
           component: TmdbTopRated
-        },
-        
+        }
       ]
     }
   ]

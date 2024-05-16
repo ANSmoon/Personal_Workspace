@@ -5,6 +5,11 @@ import UserView from "@/views/UserView.vue";
 
 import ReviewList from "@/components/review/ReviewList.vue";
 import ReviewDetail from "@/components/review/ReviewDetail.vue";
+<<<<<<< HEAD
+=======
+import ReviewUpdate from "@/components/review/ReviewUpdate.vue";
+import ReviewRegist from "@/components/review/ReviewRegist.vue";
+>>>>>>> 2078337045da9b10a8f2f364d482708bbb0f86ec
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,6 +34,19 @@ const router = createRouter({
           name: "detail",
           component: ReviewDetail,
         },
+<<<<<<< HEAD
+=======
+        {
+          path: "review/:reviewId/update",
+          name: "updateReview",
+          component: ReviewUpdate,
+        },
+        {
+          path: "review/regist",
+          name: "registReview",
+          component: ReviewRegist,
+        }
+>>>>>>> 2078337045da9b10a8f2f364d482708bbb0f86ec
       ],
     },
     {
