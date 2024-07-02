@@ -1,0 +1,39 @@
+// Author : 문범수
+// Date : 2024-01-24
+// duration : 20m
+// name : 영화 ArrayList
+// subject : ArrayList
+
+package 영화예외처리;
+
+import java.util.Arrays;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		Movie m1 = new Movie();
+		m1.setId(1);
+		m1.setTitle("어벤져스");
+		m1.setDirector("외국인");
+		m1.setGenre("SF");
+		m1.setRunningTime(160);
+		
+		Movie m2 = new Movie(2, "괴물", "봉준호", "SF", 180);
+
+		SeriesMovie m3 = new SeriesMovie(3, "해리포터", "누구더라", "Fantasy", 160, 1, "재밌는 편");
+
+		IMovieManager manage = MovieManagerImpl.getinstance();
+		
+		manage.add(m1);
+		manage.add(m2);
+		manage.add(m3);
+
+		System.out.println(Arrays.toString(manage.getList()));
+		// 예외가 발생할수 있는 메소드인 searchByTitle은 처리가 필요.
+		try {
+			System.out.println(Arrays.toString(manage.searchByTitle("황")));
+		} catch (TitleNotFoundException exception) {
+			exception.printStackTrace();
+		}
+		
+	}
+}

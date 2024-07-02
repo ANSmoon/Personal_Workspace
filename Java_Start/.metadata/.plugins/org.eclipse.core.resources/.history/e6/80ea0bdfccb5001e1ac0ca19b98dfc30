@@ -1,0 +1,18 @@
+// Author : 문범수
+// Date : 2024-01-18
+// duration : 30m
+// name : 상품, 리뷰객체 생성
+// subject : 클래스와 객체
+
+package homework;
+
+public class ProductTest {
+	public static void main(String[] args) {
+		Product pr1 = new Product("N100","Galaxy S 24",1000000, 20,"Samsung","God Samsung");
+		Product pr2 = new Product("A100","Apple 15 Ultra",1500000, 40,"Apple","God Apple");
+		ReviewProduct rv = new ReviewProduct(10, "H100","Mun","둘다 좋다");
+		
+		
+		
+	}
+}

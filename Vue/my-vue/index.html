@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX 요청</title>
+</head>
+<body>
+  <img src="http://localhost:8080/img/cat01.jpg">
+  <!-- <img src="" alt=""> -->
+    <button id="btn">게시글 조회</button>
+    <script>
+      document.querySelector("#btn").addEventListener("click", function(){
+        fetch("http://localhost:8080/api-board/board")
+        .then((response) => response.text())
+        .then((text) => console.log(text));
+      });
+    </script>
+</body>
+</html>

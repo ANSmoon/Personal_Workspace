@@ -1,0 +1,22 @@
+package homework_3;
+
+public class DigitTest2 {
+	public static void main(String[] args) {
+		int i = 1;
+		int j;
+		int space = 0;
+		int number = 17;
+		int list[] = {5, 3, 1, 3, 5};
+		int cnt = 0;
+		
+		while(i <= number) {
+			
+			for(j = 0; j < list[cnt]; j++) {
+				System.out.printf("%3d", i);
+				i++;
+			}
+			System.out.println("");
+			cnt++;
+		}
+	}
+}

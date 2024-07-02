@@ -1,0 +1,22 @@
+package homework_3;
+
+public class DigitTest2 {
+	public static void main(String[] args) {
+		int i = 1;
+		int j = 0;
+		int space = 0;
+		int number = 17;
+		
+		
+		while(i <= number) {
+			System.out.printf("%2d", i);
+			i++;
+			
+			
+		}
+		
+		
+		
+		
+	}
+}

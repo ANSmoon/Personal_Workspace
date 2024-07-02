@@ -1,0 +1,27 @@
+package homework_3;
+
+import java.util.Scanner;
+
+public class DigitTest1 {
+	public static void main(String[] args) {
+		int i = 1;
+		int condition = 5;
+		int cnt = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		int number = sc.nextInt();
+		
+		while(i <= number) {
+			System.out.printf("%-3d", i);
+			i++;
+			cnt++;
+			
+			if(condition == cnt) {
+				System.out.println();
+				System.out.print("   ");
+				condition --;
+				cnt = 0;
+			}
+		}
+	}
+}

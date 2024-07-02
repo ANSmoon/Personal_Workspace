@@ -1,0 +1,16 @@
+package class05;
+
+public class Person {
+    String name;
+    int age;
+    String hobby;
+
+    void study(int time) {
+    	System.out.println(time + "시간 공부(int)");
+    }
+    
+    void study(long time) {
+    	System.out.println(time + "시간 공부(long)");
+    }
+    
+}

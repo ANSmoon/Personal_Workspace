@@ -1,0 +1,56 @@
+package homework1;
+
+import java.util.Scanner;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		MovieManager mv = new MovieManager();
+		
+		int count;
+		do {
+			System.out.println("번호 입력");
+			System.out.println("1. 영화 추가");
+			System.out.println("2. 영화 조회[제목 입력]");
+			System.out.println("3. 종료");
+			
+			count = sc.nextInt();
+			if(count == 1) {
+				System.out.println("영화를 추가하빈다.");
+				System.out.println("너의 ID는? : ");
+				int id = sc.nextInt();
+				System.out.println("영화 제목은? :");
+				String title = sc.next();
+				System.out.println("영화 감독은? :");
+				String director = sc.next();
+				System.out.println("영화 장르는? :");
+				String genre = sc.next();
+				System.out.println("영화 시간은? :");
+				int runningTime = sc.nextInt();
+				Movie content = new Movie(id,title,director,genre,runningTime);
+				mv.add(content);
+			}
+			else if(count == 2) {
+				System.out.println("영화를 조회합니당");
+				System.out.println("영화 제목 : ");
+				String title = sc.next();
+				Movie content = mv.searchByTitle(title);
+				if(content == null) {
+					System.out.println("그딴 영화 없음");
+				}
+				else {
+					System.out.println("조회 영화 정보 출력");
+					System.out.println("ID : " + content.getId());
+					System.out.println("Title : " + content.getTitle());
+					System.out.println("Director : " + content.getDirector());
+					System.out.println("Genre : " + content.getGenre());
+					System.out.println("RunningTime : " + content.getRunningTime());
+				}
+				
+			}
+			else System.out.println("1 ~ 3번으로만 입력하세요");
+		}while(count < 3);
+		
+		
+	}
+}

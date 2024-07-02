@@ -1,0 +1,28 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: orange;
+    margin-bottom: 1rem;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow !important; 
+}
+
+
+

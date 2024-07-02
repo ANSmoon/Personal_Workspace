@@ -1,0 +1,12 @@
+package test01_exception;
+
+public class ExceptionTest {
+	public static void main(String[] args) {
+		int[] nums = {10};
+		
+		// unchecked exception
+		System.out.println(nums[2]);
+		
+		
+	}
+}

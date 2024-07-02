@@ -1,0 +1,9 @@
+
+public class 삼각형_3 {
+	public static void main(String[] args) {
+		int[][] arr = new int[4][4];
+		
+		
+		
+	}
+}

@@ -1,0 +1,15 @@
+package homework1;
+
+public class Movie {
+	int id, runningTime;
+	String title, director, genre;
+	
+	Movie() {}
+	
+	Movie(int id, String title, String director, String genre, int runningTime){
+		
+	}
+	
+	
+	
+}

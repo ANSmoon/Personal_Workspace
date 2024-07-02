@@ -1,0 +1,35 @@
+// Author : 문범수
+// Date : 2024-01-18
+// duration : 30m
+// name : 도서객체 생성
+// subject : 클래스와 method
+
+package homework;
+
+public class Book {
+	String isbn;
+	String title;
+	String author;
+	String publisher;
+	int price;
+	String desc;
+	
+	Book() {}
+	
+	Book(String isbn, String title, String author, String publisher, int price, String desc){
+		this.isbn = isbn;
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+		this.price = price;
+		this.desc = desc;
+	}
+	
+	
+	public String toString() {
+		String change = Integer.toString(price);
+		String str = isbn + "  |   " + title + "  |   " + author + "  |   " + publisher + "  |   " + change + "  |   " + desc;
+		return str;
+	}
+}
+

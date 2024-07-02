@@ -1,0 +1,20 @@
+// new Promise(function(resolve, reject) {
+//     setTimeout(() => resolve(1), 1000);
+// }).then(function(result) {
+//     console.log(result);
+//     return result*2;
+// }).then(function(result) {
+//     console.log(result);
+//     return result*2;
+// })
+
+//then , catch, finally
+
+new Promise(function(resolve, reject) {
+    setTimeout(() => resolve(1), 1000);
+}).then(function(result) {
+    console.log(result);
+    return new Promise((resolve, reject) => {
+        resolve(result*2);
+    })
+})

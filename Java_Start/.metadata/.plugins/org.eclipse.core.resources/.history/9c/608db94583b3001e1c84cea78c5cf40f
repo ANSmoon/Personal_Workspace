@@ -1,0 +1,8 @@
+package homework_10;
+import java.util.Scanner;
+
+public class How_many_days_is_it {
+	public static void main(String[] args) {
+		
+	}
+}

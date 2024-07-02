@@ -1,0 +1,52 @@
+package modifier05_getter_setter;
+
+// getter와 setter를 이용한 캡슐화 구현
+
+public class Person {
+	// 1. 멤버변수(data field)는 외부에서 접근 못하도록 private로 막는다.
+	
+	private String name;
+	private int age;
+	private String hobby;
+    
+	// 2. 합법적인 통로를 열어준다.
+	// - 접근자 & 설정자
+	
+	// 접근자 = getter
+	// 자료형 get 멤버변수명 {
+	// return 멤버변수;
+	// }
+	
+	// method 명 : camelCase
+	
+//	public String getName() {
+//		return name;
+//	}
+	
+	// 설정자 = setter
+	// public void set멤버변수명(){
+	// 		멤버변수 = 매개변수값;
+	// }
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getHobby() {
+		return hobby;
+	}
+
+	public void setHobby(String hobby) {
+		this.hobby = hobby;
+	}
+	
+	
+}

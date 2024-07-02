@@ -1,0 +1,13 @@
+// Author : 문범수
+// Date : 2024-01-17
+// duration : 
+// name : 섬나라 다리짓기
+// subject : 2차원 배열
+
+package homework;
+
+public class Bridge_P {
+	public static void main(String[] args) {
+
+	}
+}

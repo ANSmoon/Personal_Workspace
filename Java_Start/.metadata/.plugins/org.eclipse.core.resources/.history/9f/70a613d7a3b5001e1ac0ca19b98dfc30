@@ -1,0 +1,13 @@
+package class05;
+
+public class PersonTest2 {
+    public static void main(String[] args) {
+        Person p = new Person(); // 기본 생성자 호출
+        p.age = 45; 			 // 멤버 변수의 초기화 => 생성자.
+        p.name= "Yang";			 
+        p.hobby="Youtube";
+        
+
+        
+    }
+}

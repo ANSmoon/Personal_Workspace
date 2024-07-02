@@ -1,0 +1,9 @@
+// 클래스 선언자 : public class
+
+public class Person {
+	// 묶어서 관리할 data
+	// => 멤버 변수(feild) : 객체가 갖고 있는 data, 속성
+	String name;
+	int age;
+	String hobby;
+}

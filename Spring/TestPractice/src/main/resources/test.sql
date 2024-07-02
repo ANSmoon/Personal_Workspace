@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS test DEFAULT CHARACTER SET utf8mb4;
+
+USE test;
+
+CREATE TABLE IF NOT EXISTS movies (
+    id INT AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    link VARCHAR(255) NOT NULL,
+    channel_name VARCHAR(255) NOT NULL,
+    view_cnt INT DEFAULT 0,
+    category VARCHAR(255) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+select * FROM movies;

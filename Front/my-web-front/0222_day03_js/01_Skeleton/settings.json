@@ -1,0 +1,19 @@
+{
+    "workbench.colorTheme": "Sapphire",
+
+    "workbench.iconTheme": "nomo-dark-extended",
+
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    
+    "[html]": {
+        "editor.tabSize": 2,
+      },
+
+    "[css]": {
+        "editor.tabSize": 4,
+    },
+
+    "[javascript]": {
+        "editor.tabSize": 2,
+    }
+}

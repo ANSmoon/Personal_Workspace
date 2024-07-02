@@ -1,0 +1,68 @@
+package 도서배열_관리;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BookTest {
+	public static void main(String[] args) {
+		
+		BookManager bk = new BookManager();
+		Scanner sc = new Scanner(System.in);
+		
+		Book b1 = new Book("21424", "Java Pro", "김하나", "jaen.kr", 15000, "Java 기본 문법");
+		Book b2 = new Book("21425", "Java Pro2", "김하나", "jaen.kr", 25000, "Java 응용");
+		Book b3 = new Book("35355", "분석설계", "소나무", "jaen.kr", 30000, "SW 모델링");
+		
+		bk.add(b1);
+		bk.add(b2);
+		bk.add(b3);
+		
+		int cnt = 0;
+		String star = "*";
+		
+		do {
+			System.out.println(star.repeat(30) + "도서목록" + star.repeat(30));
+			for(int i = 0; i < bk.getList().length; i++) {
+				System.out.println(bk.getList()[i]);
+			}
+			
+			System.out.println("선택하세요.");
+			System.out.println("1.도서조회");
+			System.out.println("2.도서삭제");
+			System.out.println("3.도서목록");
+			cnt = sc.nextInt();
+			
+			if(cnt == 0)
+			{
+				System.out.println(star.repeat(30) + "도서목록" + star.repeat(30));
+				for(int i = 0; i < bk.getList().length; i++) {
+					System.out.println(bk.getList()[i]);
+				}
+			}
+			else if(cnt == 1) {
+				System.out.print("조회할 ISBN 번호를 입력하세요 : ");
+				String isbn = sc.next();
+				Book content = bk.searchByIsbn(isbn);
+				if(content == null) {
+					System.out.println("그딴 영화 없음");
+				}
+				else {
+					System.out.println("Book [isbn=" + content.getIsbn() + ", title=" + content.getTitle() + ", author=" + content.getAuthor() + ", publisher=" + content.getPublisher()
+							+ ", price=" + content.getPrice() + ", desc=" + content.getDesc() + "]");
+				}
+			}
+			else if(cnt == 2) {
+				System.out.print("삭제할 ISBN을 입력하세요 : ");
+				String delete = sc.next();
+				for(int i = 0; i < bk.getList().length; i++) {
+					
+				}
+				
+			}
+			
+		}while(cnt != 0);
+		
+		
+		
+	}
+}

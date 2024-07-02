@@ -1,0 +1,7 @@
+package homework_5;
+
+public class BlastFurnace {
+	public static void main(String[] args) {
+		
+	}
+}

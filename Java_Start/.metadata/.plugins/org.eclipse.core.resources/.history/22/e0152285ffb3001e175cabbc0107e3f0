@@ -1,0 +1,13 @@
+package homework_10;
+import java.util.Scanner;
+
+public class How_many_days_is_it {
+	public static void main(String[] args) {
+		System.out.println("월과 일을 입력하세요.");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int 
+		
+	}
+}

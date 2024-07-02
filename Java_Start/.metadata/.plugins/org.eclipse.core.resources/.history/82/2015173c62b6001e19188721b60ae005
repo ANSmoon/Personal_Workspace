@@ -1,0 +1,26 @@
+// 클래스 선언자 : public class
+package class04;
+
+public class Person {
+	// static 변수
+	// - method 영역(클래스 영역, static 영역)에 메모리 할당
+	// - 인스턴스 생성 전에 이미 클래스 로딩 시점에 메모리 할당
+	// - 모든 인스턴스가 공유
+
+	static int pCount;
+	
+	String name;
+	int age;
+	String hobby;
+	
+	
+	void info() {
+		// 멤버 method => 멤버 변수에 바로 접근 가능
+		System.out.println("이름은 " + name + "이고, 나이는 " + age + "새 취미는 " + hobby + "입니다.");
+	}
+	
+	static void hello() {
+		System.out.println("Hello world!");
+	}
+	
+}

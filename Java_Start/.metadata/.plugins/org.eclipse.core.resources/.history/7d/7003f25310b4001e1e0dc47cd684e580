@@ -1,0 +1,31 @@
+
+public class Array06_Sector_Sub {
+	public static void main(String[] args) {
+		int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+		int sum = 0;
+		int N = 5;
+		int M = 9;
+
+		for (int i = N; i < M; i++)
+			sum += arr[i];
+
+		System.out.println(sum);
+
+		// 2. A : 0~M까지 합
+		// B : 0~(N-1)까지 합
+		// A - B : N ~ M 까지 합
+
+		int A = 0;
+		int B = 0;
+
+		for (int i = 0; i < M; i++)
+			A += arr[i];
+
+		for (int i = 0; i < N - 1; i++)
+			B += arr[i];
+		
+		System.out.println(A - B);
+		
+	}
+}

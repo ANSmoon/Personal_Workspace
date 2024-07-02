@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link를 해주지 않으면 스타일이 적용되지 않는다. -->
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <!-- 홈으로 갈 수 있는 로고와 검색을 위한 form, 메뉴들의 링크 작성 -->
+    <header>
+        <nav class="header-nav">
+            <div class="header-nav-logo">
+                <a href="index.html">영화관리</a>
+            </div>
+            <form name="profile" action="#">
+                <div class="header-nav-search">
+                    <input type="text" placeholder="제목을 입력하시오." />
+                    <input type="submit" value="검색" />
+                </div>
+            </form>
+            <nav class="header-nav-menu">
+                <span><a href="login.html">Login</a></span>
+                <span><a href="index.html">Logout</a></span>
+                <span><a href="register.html">회원가입</a></span>
+                <span><a href="#">게시판</a></span>
+                <span><a href="#">마이페이지</a></span>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <!-- 비정렬 리스트-->
+            <!-- 영화 목록 -->
+            <h3>영화목록</h3>
+            <ul>
+                <li>
+                    <img src="img/eternals.jpg" alt="Eternals">
+                    <div class="movie">
+                        <div>
+                            <b>이터널스</b><br>
+                            <span>액션</span><br>
+                            <span>클로이자오</span><br>
+                            <span>155분</span><br>
+                        </div>
+                        <button class = "btn">★</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/venom.jpg" alt="Venom 2">
+                    <div class="movie">
+                        <div>
+                            <b>베놈 2 : Let dare be Carnage</b><br>
+                            <span>액션</span><br>
+                            <span>앤디 서키스</span><br>
+                            <span>97분</span><br>
+                        </div>
+                        <button class = "btn">★</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/parasite.jpg" alt="기생충">
+                    <div class="movie">
+                        <div>
+                            <b>기생충</b><br>
+                            <span>드라마</span><br>
+                            <span>봉준호</span><br>
+                            <span>131분</span><br>
+                        </div>
+                        <button class = "btn">★</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/harrypoter_stone.jpg" alt="해리포터와 마법사의 돌">
+                    <div class="movie">
+                        <div>
+                            <b>해리포터와 마법사의 돌멩이</b><br>
+                            <span>판타지</span><br>
+                            <span>크리스 콜럼버스</span><br>
+                            <span>152분</span><br>
+                        </div>
+                        <button class = "btn">★</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/harrypoter_room.jpg" alt="해리포터와 비밀의 룸">
+                    <div class="movie">
+                        <div>
+                            <b>해리포터와 비밀의 룸</b><br>
+                            <span>판타지</span><br>
+                            <span>크리스 콜럼버스</span><br>
+                            <span>162분</span><br>
+                        </div>
+                        <button class = "btn">★</button>
+                    </div>
+
+                </li>
+                <li>
+                    <img src="img/load_of_ring.jpg" alt="반지의 제왕">
+                    <div class="movie">
+                        <div>
+                            <b>반지의 제왕</b><br>
+                            <span>판타지</span><br>
+                            <span>피터 잭슨</span><br>
+                            <span>263분</span><br>
+                        </div>
+                        <button class = "btn">★</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/dune.jpg" alt="듄">
+                    <div class="movie">
+                        <div>
+                            <b>듄</b><br>
+                            <span>모험</span><br>
+                            <span>드니 뵐뇌브</span><br>
+                            <span>155분</span><br>
+                        </div>
+                        <button class = "btn">★</button>
+                    </div>
+
+                </li>
+                <li>
+                    <img src="img/tomb_of_the_river.jpg" alt="강릉">
+                    <div class="movie">
+                        <div>
+                            <b>강릉</b><br>
+                            <span>범죄</span><br>
+                            <span>윤영빈</span><br>
+                            <span>119분</span><br>
+                        </div>
+                        <button class = "btn">★</button>
+                    </div>
+
+                </li>
+                <!-- 나머지 영화 항목도 위와 같은 형태로 추가 -->
+            </ul>
+        <!-- 영화 찜 리스트 작성 -->
+
+        </section>
+        <aside>
+            <h3>찜리스트</h3>
+            아직 찜한 영화가 없습니다....
+        </aside>
+
+    </main>
+
+    <!-- 이용약관 / 오시는 길 -->
+    <footer>
+        <ul>
+            <li><a href="https://www.naver.com">개인정보처리방침</a></li>
+            <li><a href="https://finance.naver.com/">이용약관</a></li>
+            <li><a href="https://map.naver.com/">오시는길</a></li>
+            <li>&copy; SSAFY 대전_4반_문범수</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

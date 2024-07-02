@@ -1,0 +1,15 @@
+서술형 문제
+application.properties의 각 항목이 어떤 설정인지 항목마다 설명을 작성하시오
+
+spring.application.name=SpringQuest // 실행할 Spring class name을 나타낸다.
+
+# dataSource
+spring.datasource.driver-class-name= DB연결을 위해 사용할 Driver를 설정한다.
+spring.datasource.url= 연결할 DB의 Schema 주소를 나타낸다.
+spring.datasource.username= 연결할 DB에 설정된 사용자 이름을 나타낸다.
+spring.datasource.password= 연결할 DB에 설정된 사용자 password를 나타낸다.
+
+# mybatis
+mybatis.mapper-locations=classpath*:mappers/*.xml : 사용할 mapper의 경로를 나타낸다.
+mybatis.type-aliases-package=_________________ : 각 변수들의 타입을 저장하고 있는 class의 경로를 나타낸다.
+mybatis.configuration.map-underscore-to-camel-case=true : sql 구문인 _ 방식을 java 방식인 camel-case로 변환한다.

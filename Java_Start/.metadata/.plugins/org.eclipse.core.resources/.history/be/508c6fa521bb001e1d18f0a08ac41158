@@ -1,0 +1,23 @@
+package test03_throws;
+
+import java.io.FileNotFoundException;
+import java.io.IOError;
+import java.io.IOException;
+
+class parent {
+	public void method1() throws IOException {
+		
+	}
+
+	public void method2() throws ClassNotFoundException {
+		
+	}
+
+}
+
+// throwtest4는 parent의 자식
+public class ThrowTest4 extends parent{
+		@Override
+		public void method1() throw FileNotFoundException{
+		}
+}

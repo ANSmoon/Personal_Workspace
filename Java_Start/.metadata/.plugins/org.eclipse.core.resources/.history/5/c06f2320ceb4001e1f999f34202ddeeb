@@ -1,0 +1,10 @@
+
+public class Array01_2차원배열_생성 {
+	public static void main(String[] args) {
+		int [][] arr1 = new int[3][4]; // 자료형의 기본값으로 초기화.
+		
+		
+		
+		
+	}
+}

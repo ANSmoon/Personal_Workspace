@@ -1,0 +1,125 @@
+// Author : 문범수
+// Date : 2024-01-24
+// duration : 20m
+// name : 영화 ArrayList
+// subject : ArrayList
+
+package 영화예외처리;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MovieManagerImpl implements IMovieManager {
+
+	private List<Movie> movieList = new ArrayList<Movie>();
+
+	private final static int MAX_SIZE = 100;
+	private static MovieManagerImpl instance = new MovieManagerImpl();
+
+	// 1. 생성자를 private으로 막아서 외부에서 생성하지 못하도록 차단
+	private MovieManagerImpl() {
+	}
+
+	// 2. 객체를 단 한번만 생성해서 갖고 있는다.[static으로 만들어야 static으로 접근 가능]
+	public static IMovieManager getinstance() {
+		return instance;
+	}
+
+	@Override // 영화 추가 메소드
+	public void add(Movie m) {
+		if (movieList.size() < MAX_SIZE) {
+			movieList.add(m);
+		} else {
+			System.out.println("그만 괴롭혀...");
+		}
+
+	}
+
+	@Override // 모든 영화 출력 메소드
+	public Movie[] getList() {
+		if (movieList.size() == 0)
+			return null;
+		Movie[] result = new Movie[movieList.size()];
+		return this.movieList.toArray(result);
+
+		// error code
+//		Movie[] result = new Movie[movieList.size()];
+//		System.arraycopy(movieList, 0, result, 0, movieList.size());
+//		
+//		return result;
+	}
+
+	@Override // 일반 영화 반환 메소드
+	public Movie[] getMovies() {
+		List<Movie> temp = new ArrayList<>();
+
+		for (int i = 0; i < movieList.size(); i++) {
+			if (!(movieList.get(i) instanceof SeriesMovie)) {
+				temp.add(movieList.get(i));
+			}
+		}
+
+		if (temp.size() == 0)
+			return null;
+
+		Movie[] result = new Movie[temp.size()];
+		// 방법 1
+		System.arraycopy(temp, 0, result, 0, temp.size());
+		return result;
+		// 방법 2
+//		return temp.toArray(result);
+	}
+
+	@Override // 시리즈 영화 추가 메소드
+	public SeriesMovie[] getSeriesMovies() {
+		List<Movie> temp = new ArrayList<>();
+
+		for (int i = 0; i < movieList.size(); i++) {
+			if ((movieList.get(i) instanceof SeriesMovie)) {
+				temp.add((SeriesMovie) movieList.get(i));
+			}
+		}
+
+		if (temp.size() == 0)
+			return null;
+
+		SeriesMovie[] result = new SeriesMovie[temp.size()];
+		// 방법 1
+//		System.arraycopy(temp, 0, result, 0, temp.size());
+//		return result;
+		// 방법 2
+		return temp.toArray(result);
+	}
+
+	@Override // 영화 제목 찾기 메소드 : 일부 및 전체 탐색
+	public Movie[] searchByTitle(String title) throws TitleNotFoundException{
+		List<Movie> temp = new ArrayList<>();
+		
+			for (int i = 0; i < movieList.size(); i++) {
+				if (movieList.get(i).getTitle().contains(title)) {
+					temp.add(movieList.get(i));
+				}
+			}	
+		if(temp.size() == 0){
+			throws new TitleNotFoundException(title);
+		}
+		
+		Movie[] result = new Movie[temp.size()];
+
+		// 방법 1.
+//		System.arraycopy(temp, 0, result, 0, temp.size());
+//		return result;
+
+		// 방법 2.
+		return temp.toArray(result);
+	}
+
+	@Override // 전체 영화 평균 시간 반환 메소드
+	public double getRunningTimeAvg() {
+		double sum = 0d;
+		for (int i = 0; i < movieList.size(); i++) {
+			sum += movieList.get(i).getRunningTime();
+		}
+		return sum / movieList.size();
+	}
+}

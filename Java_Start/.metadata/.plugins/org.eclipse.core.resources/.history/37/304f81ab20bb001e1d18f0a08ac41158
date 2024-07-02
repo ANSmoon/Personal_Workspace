@@ -1,0 +1,21 @@
+package test03_throws;
+
+import java.io.IOError;
+import java.io.IOException;
+
+class parent {
+	public void method1() throws IOException {
+		
+	}
+
+	public void method2() throws ClassNotFoundException {
+		
+	}
+
+}
+
+public class ThrowTest4 {
+	public static void main(String[] args) {
+
+	}
+}

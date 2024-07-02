@@ -1,0 +1,5 @@
+package test05_user_exception;
+
+public class FruitNotFoundRuntimeException extends RuntimeException{
+	public FruitNotFoundException
+}

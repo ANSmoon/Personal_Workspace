@@ -1,0 +1,23 @@
+package class04;
+
+public class PersonTest {
+	public static void main(String[] args) {
+		// static 변수의 접근은
+		// 클래스 이름으로 바로 접근 가능
+		
+		Person p = new Person();
+		
+		// yang : instance
+		// 객체의 멤버변수에 접근할 때는 .연산자 사용
+		// . 가지고 있는
+		
+		p.name = "Yang";
+		p.age = 27;
+		p.hobby = "Play";
+		
+		p.info();
+		System.out.println("이름은 " + p.name + "이고, 나이는 " + p.age + "새 취미는 " + p.hobby + "입니다.");
+		Person.hello(); // 객체 생성없이 클래스 이름으로 바로 접근
+		
+	}
+}

@@ -1,0 +1,27 @@
+package test04_finally;
+
+public class FinallyTest1 {
+    public static void main(String[] args) {
+    	
+    	// 정상 실행 시 : 1 2 4 5
+    	// 예외 발생 시 : 1 3 4 5
+    	
+    	
+        int num = 0;
+//        int[] nums = {10};
+        
+        try {
+            System.out.println("1");
+            int i = 1 / num;
+            nums[3] = 1;
+            System.out.println("2");
+        } catch (ArithmeticException e) {
+            System.out.println("3");
+            return;
+        } finally {
+            System.out.println("4");
+        }
+        System.out.println("5");
+    }
+
+}

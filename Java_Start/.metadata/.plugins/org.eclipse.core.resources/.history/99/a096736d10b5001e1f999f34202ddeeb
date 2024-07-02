@@ -1,0 +1,19 @@
+// Author : 문범수
+// Date : 2024-01-17
+// duration : 110m
+// name : 빌딩건설
+// subject : 2차원 배열
+
+package homework;
+
+import java.util.Scanner;
+
+public class SpiderWeb {
+	public static void main(String[] arge) {
+		Scanner sc = new Scanner(System.in);
+		
+		int size = sc.nextInt();
+		
+		
+	}
+}

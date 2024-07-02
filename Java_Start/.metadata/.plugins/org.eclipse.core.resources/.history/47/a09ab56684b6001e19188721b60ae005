@@ -1,0 +1,26 @@
+package homework1;
+
+public class MovieManager {
+	MovieManager[] mv = new MovieManager[100];
+	
+	int MAX_SIZE = 100;
+	Movie[] movieList = new Movie[MAX_SIZE];
+	int size = 0;
+	
+	
+	
+	
+	public void add(movie: Movie) {
+		for(int i = 0; i < MAX_SIZE; i++) {
+			
+		}
+	}
+	
+	public String getList() {
+		return "";
+	}
+	
+	public String searchByTitle(String title) {
+		
+	}
+}

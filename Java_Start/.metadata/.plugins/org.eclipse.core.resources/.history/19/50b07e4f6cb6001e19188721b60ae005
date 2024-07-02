@@ -1,0 +1,9 @@
+package modifier06_singleton;
+
+// singleton pattern을 이용해 구현
+public class ScoreManager {
+    private int score;
+	//score를 관리하는 객체
+	
+	
+}

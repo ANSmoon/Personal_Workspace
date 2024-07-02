@@ -1,0 +1,26 @@
+package modifier07_object_array;
+
+public class StudentManager {
+	// 빈배열. 객체들의 배열
+	private Student[] students = new Student[100]; // 학생 정보 최대 100명
+    private int size = 0; // 학생 수
+	
+	// 학생들의 배열을 갖고 있는 객체
+	// 학생들 배열 관리
+	// singleton pattern을 적용해 하나만 생성되도록 만들기
+	
+	private static StudentManager instance = new StudentManager();
+	
+	private StudentManager() {
+		
+	}
+    
+	public static StudentManager getInstance() {
+		return instance;
+	}
+	
+	public void addStudent(Student st) {
+		students[size] = st;
+		size++;
+	}
+}

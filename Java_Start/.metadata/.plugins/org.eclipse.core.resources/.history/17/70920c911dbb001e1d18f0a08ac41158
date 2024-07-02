@@ -1,0 +1,15 @@
+package test03_throws;
+
+// CheckedException
+public class ThrowTest1 {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void method() {
+	}
+	
+	public static void method2() {
+		
+	}
+}

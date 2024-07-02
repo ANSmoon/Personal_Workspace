@@ -1,0 +1,24 @@
+package modifier06_singleton;
+
+// singleton pattern을 이용해 구현
+//score를 관리하는 객체
+
+public class ScoreManager {
+    // 객체의 멤버 변수
+	private int score;
+    
+	
+	// 2. 객체를 단 한 번만 생성해서 갖고 있는다.
+	private ScoreManager instance = new ScoreManager();
+	
+	// 1. 생성자를 private으로 막아서, 외부에서 생성하지 못하도록 차단
+	private ScoreManager() {
+		
+	}
+    
+	// 3. 외부에서 접근할 수 있는 합법적 통로를 열어준다.
+	public ScoreManager getIntance() {
+		return intance;
+	}
+	
+}

@@ -1,0 +1,19 @@
+package 도서배열_관리;
+
+public class Book {
+	String isbn, title, author, publisher, desc;
+	int price;
+	
+	Book() {}
+	Book(String isbn, String title, String author, String publisher, int price, String desc){
+		this.isbn = isbn;
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+		this.price = price;
+		this.desc = desc;
+	}
+	
+	
+	
+}

@@ -1,0 +1,9 @@
+
+public class 탐색_1 {
+	public static void main(String[] arge) {
+		int[] dr = {-1,1,0,0};
+		int[] dc = {0,0,-1,1};
+		
+		
+	}
+}

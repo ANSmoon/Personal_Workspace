@@ -1,0 +1,13 @@
+package test05_user_exception;
+
+public class NameNotFoundException extends Exception{
+	private String name;
+	public NameNotFoundException(String name) {
+		super(name + "그딴 이름 없다.");
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+}
