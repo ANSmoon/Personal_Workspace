@@ -1,0 +1,13 @@
+
+”	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(“Ş­ÿÿÿÿÿ8ôÜµº‡2J$cc134b26-fa5e-48ca-9253-94efeadb5282
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Óíªúøÿÿÿÿ8 ¶µº‡2J$2d6e8429-ce5d-4a98-8756-e79ebfa73c71
+
+java:S3008"LRename this field "N" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ã›×8Íğ´º‡2J$51084939-4be1-4304-8c51-0ff1aad0066f
+‰
+java:S1659"FDeclare "sharkSize" and all following declarations on a separate line.(¬ã›×8Íğ´º‡2J$8ee18cf2-d1f5-4bbe-a313-1b0db5b349c4
+m	java:S1061"+Replace this use of System.out by a logger.(‚ÓÈª8Íğ´º‡2J$4ebaa2b3-3ad8-484e-92f5-63691e0c60b1
+š
+java:S37764"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(òĞáşÿÿÿÿ8Íğ´º‡2J$b11167b0-3899-43a9-b227-0e3833ef57f3
+g
+java:S1659<"$Declare "minCol" on a separate line.(°˜Ÿå8Íğ´º‡2J$6aeea483-ec87-4c4a-8647-6ecacc5e62df

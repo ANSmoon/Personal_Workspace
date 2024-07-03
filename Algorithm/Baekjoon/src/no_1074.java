@@ -12,7 +12,6 @@
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -34,10 +33,6 @@ public class no_1074 {
 
 		size = (int) Math.pow(N, 2); // 나오는 z 패턴의 갯수
 		matrix = new int[size][size];
-		
-		
 
 	}
-	
-	
 }

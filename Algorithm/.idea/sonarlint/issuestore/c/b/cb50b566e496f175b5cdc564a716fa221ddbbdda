@@ -1,0 +1,25 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ï‹Ğ›øÿÿÿÿ
+o
+java:S1104"TMake material a static final constant or non-public and provide accessors if needed.(©—Ì¶ùÿÿÿÿ
+c
+java:S1104"MMake N a static final constant or non-public and provide accessors if needed.(Øğ…
+d
+java:S1104"OMake set a static final constant or non-public and provide accessors if needed.(û¾Ÿ8
+0
+java:S1220""Move this file to a named package.
+I
+java:S1444".Make this "public static material" field final(©—Ì¶ùÿÿÿÿ
+=
+java:S1444"'Make this "public static N" field final(Øğ…
+>
+java:S1444")Make this "public static set" field final(û¾Ÿ8
+2
+java:S1643"Use a StringBuilder instead.(¤œ§õ
+b
+java:S3008"LRename this field "N" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øğ…
+8
+java:S2386"Make this member "protected".(©—Ì¶ùÿÿÿÿ
+9
+java:S2386"Make member "set" "protected".(˜îìÅÿÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(Íó¦âûÿÿÿÿ

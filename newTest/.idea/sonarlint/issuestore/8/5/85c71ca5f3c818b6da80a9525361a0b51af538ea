@@ -1,5 +1,12 @@
 
-”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ãš‘üÿÿÿÿ8ï Œ•‡2J$2efd50c9-2632-45b4-8689-7b746bbec4f2
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Óíªúøÿÿÿÿ8ï Œ•‡2J$e369c321-167e-444c-9ac3-a4af54f1be8b
-‰
-java:S1659"FDeclare "sharkSize" and all following declarations on a separate line.(Ø¨Àá8ï Œ•‡2J$d7fd40fe-4acf-4820-9b18-365663f33d7a
+”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ãš‘üÿÿÿÿ8¼§æ»‡2J$889f9497-d94d-47ce-ac3d-b2097cece20d
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Óíªúøÿÿÿÿ8¼§æ»‡2J$926390ac-6894-4e3c-b7f7-18beb83fe555
+ˆ
+java:S1659"FDeclare "sharkSize" and all following declarations on a separate line.(ªÄØ8¼§æ»‡2J$0bef26d1-04de-42d6-af54-2427f33e5c9e
+m	java:S106A"+Replace this use of System.out by a logger.(‚ÓÈª8¼§æ»‡2J$12b31ab9-9c69-4083-9523-df1fd9c80834
+š
+java:S3776I"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(òĞáşÿÿÿÿ8¼§æ»‡2J$9ce66259-b8c6-4f5f-a941-f41d006c7e2e
+f
+java:S1659Q"$Declare "minCol" on a separate line.(¾‡ÑD8¼§æ»‡2J$d47d3891-74f1-4602-b590-2f92ca8ecca4
+†
+java:S1659U">Declare "y" and all following declarations on a separate line.(±šñÚüÿÿÿÿ8„ôæ»‡2J$3ca7b42c-ed0d-440a-ab6c-4109c18b08f2
