@@ -1,12 +1,12 @@
 /*
  * Author : 문범수
  * Date : 2024-07-02
- * subject :
+ * subject : BFS
  * page : https://www.acmicpc.net/problem/16236
  * main : Greedy Algorithm
  * issue : Intellij Issue
  * name : babyShark.java
- * duration : m
+ * duration : 4h
  * no : 16236
  */
 
