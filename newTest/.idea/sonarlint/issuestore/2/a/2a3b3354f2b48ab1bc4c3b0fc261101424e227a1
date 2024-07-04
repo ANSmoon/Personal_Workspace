@@ -1,0 +1,13 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(áºµýÿÿÿÿ8ô©Žç‡2J$bf46e284-03f7-4eef-9a48-20e2d380eb58
+”
+java:S3008"LRename this field "V" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º˜ú·úÿÿÿÿ8ô©Žç‡2J$fe99047f-d903-422a-bf8c-ce64e0a61213
+”
+java:S3008"LRename this field "E" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º˜ú·úÿÿÿÿ8ô©Žç‡2J$9cb02aa1-4bee-4b9a-8e52-f6412ec0fbe4
+”
+java:S3008"LRename this field "K" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º˜ú·úÿÿÿÿ8ô©Žç‡2J$3ca87a75-5d8d-4388-ac0a-17a6ed6289d5
+†
+java:S1659">Declare "E" and all following declarations on a separate line.(º˜ú·úÿÿÿÿ8ô©Žç‡2J$4441d102-aa90-4dd1-a5f3-f2dfe78492f5
+r	java:S106;"+Replace this use of System.out by a logger.(û¿ùÇýÿÿÿÿ8ô©Žç‡2J$b8160da9-55dc-4f8c-8665-4edb499cb7b9
+r	java:S106="+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ8ô©Žç‡2J$536b6b98-3cc6-4da3-993c-35794ecb8545
+r	java:S106L"+Replace this use of System.out by a logger.(…Ø·Æûÿÿÿÿ8›·‘ç‡2J$850e78c3-af4f-40fa-b8de-6dbfdb993cb3
